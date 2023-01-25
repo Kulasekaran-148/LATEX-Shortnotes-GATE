@@ -1,5 +1,5 @@
 \documentclass[8pt]{article}
-\usepackage{amsmath, xfrac, enumitem, graphicx, ulem, float, bigints, bm}
+\usepackage{amsmath, xfrac, enumitem, graphicx, ulem, float, bigints, bm, textcomp}
 \usepackage[margin=0.7in]{geometry}
 \graphicspath{ {images/} }
 \title{Thermodynamics GATE}\author{Kulasekaran}
@@ -149,7 +149,7 @@ $\rightarrow \boxed{mass(m) = number\;of\;moles(n) * Molecular\;mass(M)}$\\\hrul
 			\begin{itemize}
 				\item[$\implies$] $\boxed{\delta Q = dU + \delta W}$ for stationary process
 			\end{itemize}
-		\item $\delta Q = \delta W impliedby$ for cycle
+		\item $\delta Q = \delta W \impliedby$ [for cycle ($dU = 0$)]
 		\item $U(Internal\;energy),H(Enthalpy) = f(T)$ only for an ideal gas.	
 	\end{itemize}\hrulefill\\\\
 %----------------------------------------------------------------------------------------%
@@ -743,5 +743,55 @@ $$\boxed{\dfrac{P_1}{\rho} + \dfrac{{C_1}^2}{2} + gZ_1 = \dfrac{P_2}{\rho} + \df
 		\item Now, The second law efficiency $\boxed{\eta_{II} = \dfrac{\eta_{actual}}{\eta_{max}}} = \dfrac{9.5}{10} = 95\% \impliedby$ as you can see the engine is performing quite the best. 
 		\item similarly, for work consuming devices, $\boxed{\eta_{II}=\dfrac{\eta_{rev}}{\eta_{actual}}}$
 		\item For Heat pumps and refrigerators, $\boxed{\eta_{II}=\dfrac{COP_{actual}}{COP_{rev}}}$
-	\end{itemize}		
+	\end{itemize}\hrulefill\\\\
+%----------------------------------------------------------------------------------------%
+\begin{center}
+\subsection*{\uwave{7. Properties of Pure Substance}}
+\end{center}	
+\dashuline{\textbf{Introduction :-}}\\
+	\begin{itemize}
+		\item \textbf{Pure substance: }has fixed chemical composition throughout. It does not have to be a single component. for eg. Air is a mixture of many gases and is considered a pure substance and on the other hand, a mixture of liquid air and air is not a pure substance, because different gases have different condensing point. 
+	\end{itemize}\hrulefill\\\\
+%----------------------------------------------------------------------------------------%
+\dashuline{\textbf{Phase change of a pure substance :-}}
+	\begin{itemize}
+		\item Consider 1 kg of liquid water at 25\textdegree C in a vertical piston cylinder arrangement. This setup is heated to 100\textdegree C at atmospheric pressure. 
+		\item After the water reaches 100\textdegree C, if the heating is continued, the water begins to change phase to vapor while the temperature is still 100\textdegree C. That amount of heat that was added to convert a unit mass of liquid to a unit mass of vapor is called \textbf{Latent heat of vapourization}.
+		\item The corresponding temperature and pressure at phase change is called \textbf{saturation temperature} and \textbf{saturation pressure}
+		\item For a pure substance, there exists a definite relationship between the saturation temperature and pressure. The curve of that relation is called \textbf{Vapor pressure curve} (drawn in a PT diagram)
+		\item \textbf{Subcooled liquid: }For a given pressure, if the temperature of the liquid drops below the saturation temperature, then the liquid is said to be subcooled. 
+		\begin{itemize}
+			\item[$\implies$]\textbf{Degree of subcooling: } $T_{sat} - T$	
+		\end{itemize}				
+		\item \textbf{Saturated Liquid: }Just before the boiling starts, the liquid is said to be saturated.
+		\item \textbf{Saturated Vapour: }After all the liquid has undergone the phase change. 
+		\item \textbf{Superheated Vapour: }If the saturated vapour is heated, then its called superheated vapour. 
+		\begin{itemize}
+			\item[$\implies$]\textbf{Degree of Superheating: } $T-T_{sat}$	
+		\end{itemize}
+		\item \textbf{NOTE: } As pressure is increased, the Latent heat of vapourization decreases.
+		\item \textbf{Critical pressure: } The pressure for which the Latent heat of vapourization becomes zero. For water, the critical pressure is 225 bar. At critical pressure, the specific volume of saturated liquid and saturated vapour becomes equal. i.e.,($v_f=v_g$). \textbf{Above critical pressure, Liquid water directly converts to superheated steam}
+		\item \textbf{Wet region: } Region where saturated liquid and vapour coexist in equilibrium.
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{Phasechange.png}
+			\centering
+		\end{figure}
+	\end{itemize}\hrulefill\\\\
+%----------------------------------------------------------------------------------------%
+\dashuline{\textbf{Property Diagrams}}\\\\
+\textsc{P-T diagram}
+	\begin{itemize}
+		\item Also called Phase diagram
+		\item Three lines separates the three phases
+			\begin{itemize}
+				\item \textbf{Sublimation line: }separates Solid and vapour
+				\item \textbf{Vapourization line: }separates Liquid and Vapour
+				\item \textbf{Melting (or) Fusion line: }separates Solid and Liquid
+					\begin{itemize}
+						\item Substances that expand or contract on freezing differ only in the Melting line of the PT diagram.
+					\end{itemize}
+			\end{itemize}
+		\item The above three lines meet at \textbf{Triple Point}
+		
+	\end{itemize}
 \end{document}
