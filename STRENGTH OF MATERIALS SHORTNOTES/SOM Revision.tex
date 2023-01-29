@@ -539,4 +539,112 @@
 			\begin{itemize}
 				\item $\boxed{U = \int\dfrac{T_x^2ds}{2GI_P}}\impliedby (I_P$ = Polar MOI)
 			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Shear force and Bending Moment}
+	\section{Types of Loading}
+		\begin{itemize}
+			\item Point load
+			\item Uniformly Distributed Load
+			\item Uniformly Varying Load
+			\item Couple - Concentrated moment at any point is called couple
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Types of supports}	
+		\subsection{Types of 2D Supports}
+			\begin{itemize}
+				\item Fixed support - $R_x,R_y,M_z$
+				\item Hinged Support - $R_x,R_y$
+				\item Roller support - $R_y$
+				\item Double roller support - $R_y,M_z$
+			\end{itemize}
+		\subsection{Types of 3D Supports}
+			\begin{itemize}
+				\item Fixed support - $R_x,R_y,R_z,M_x,M_y.M_z$
+				\item Hinged support - $R_x,R_y,R_z$
+				\item Roller support - $R$
+			\end{itemize}\hrulefill			%-----------------------------------------------------------------------------------------%
+	\section{Types of Beams}
+		\begin{itemize}
+			\item Simply supported beam
+			\item Cantilever beam
+			\item Propped cantilever beam
+			\item Fixed beam
+			\item Continuous beam
+			\item Overhanging beam
+			\item \textbf{NOTE: If an internal hinge is present in a beam, then Bending moment at hinge is Zero. Hinges carry only Axial load.}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Statically determinate structure}
+		\begin{itemize}
+			\item A structure is said to be statically determinate if all the reaction forces can be found using the static equilibrium equations (2D): $\boxed{\sum F_x=0\;\;\sum F_y=0\;\;\sum M_z=0}$
+			\item If R denotes the number of reactions and E denotes the number of equilibrium equations available, then if (R $=$ E ) the structure is determinate, if (R $>$ E) then the structure is indeterminate
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Shear Force}
+		\begin{itemize}
+			\item Clockwise shear = +ve and Anticlockwise shear = -ve
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Bending Moment}
+		\begin{itemize}
+			\item Sagging Bending moment = +ve and Hogging Bending moment = -ve
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Important points about SFD and BMD}
+		\begin{itemize}
+			\item SFD is one degree higher than Loading diagram and BMD is one degree higher than SFD
+			\item If a point load is present, then the SFD will change by that load's magnitude
+			\item If a concentrated moment is present, then the BMD will change by that moment's magnitude
+			\item Bending will be maximum/minimum at the point where Shear force is zero, but the inverse is not true
+			\item \textbf{Point of Contraflexure} - The point where Bending moment changes sign
+			\item \textbf{Focal length} - The distance between two adjacent points of contraflexure
+			\item \textbf{Shear span} - the portion of beam where shear force is constant.
+			\item Relation between Loading rate and Shear force: $\boxed{\dfrac{dS}{dx}=-W}$
+			\item Relation between Shear force and bending moment: $\boxed{\dfrac{dM}{dx}=S_x}\implies$ Slope of bending moment = shear force.
+			\item Relation between Bending moment and Loading rate: $\boxed{\dfrac{d^2M}{dx^2}=-w}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Curve Tracing for SFD and BMD}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{curvetracing.png}
+			\end{figure}\hrulefill	%-----------------------------------------------------------------------------------------%
+	\section{SFD and BMD by Integration}
+		\begin{itemize}
+			\item Use the relations between Loading rate, shear force and Bending moment:
+				\begin{itemize}
+					\item[$\implies$] $\boxed{\dfrac{d^2M}{dx^2}=-w}\;\;\;$...(i)  $\boxed{\dfrac{dM}{dx}=S_x=-Wx+C_1}\;\;\;$...(ii)  $\boxed{M_x = \dfrac{-Wx^2}{2} + C_1x + C_2}$   ...(iii)
+					\item \textbf{NOTE: } Eqn(i)'s RHS will change according the loading. For eg. in case of Uniformly variying load, $$\boxed{\dfrac{d^2M}{dx^2}= -W_x = \dfrac{-Wx}{L}}$$
+				\end{itemize}
+			\item The constants $C_1$ and $C_2$ can be found by boundary conditions
+			\item From (ii) SFD can be plotted, from (iii) BMD can be plotted
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Effect of Concentrated moment on SFD and BMD}
+		\begin{itemize}
+			\item At the point of concentrated moment, discontinuity occurs in BMD. The BMD ordinate changes by the magnitude of the moment. For SFD, concentrated moment induces support reactions only.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{concmoment}
+			\end{figure}
+		\end{itemize}\hrulefill	%-----------------------------------------------------------------------------------------%
+	\section{Loading diagram and BMD from SFD}
+		\begin{itemize}
+			\item In SFD, the portion where SF is constant, it means no load is acting in that portion
+			\item In SFD, Vertical lines represent loads (Generally upward loads denote reactions)
+			\item Inclined line in SFD denotes Uniformly distributed load. Intensity of UDL = slope of line in SFD
+			\item Parabolic curve in SFD denotes Uniformly varying load. 
+			\item If $\sum M$ at supports is zero, then the support is hinged or roller. If its not zero, then it is a fixed support.
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Loading diagram from BMD}
+		\begin{itemize}
+			\item In BMD, the portion where there is an inclined line, that means no load is acting in that region
+			\item Parabolic curve in BMD denotes Unifromly distributed load. 
+			\item Cubic curve in BMD denotes Uniformly varying load.
+			\item The point where BMD changes its ordinate suddenly, a concentrated moment is acting at that point. 
+			\item BMD is one degree higher than SFD and two degree higher than Loading diagram
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Centroid and Moment of Inertia}
 \end{document}
