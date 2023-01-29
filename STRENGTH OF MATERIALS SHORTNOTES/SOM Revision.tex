@@ -1,22 +1,26 @@
-\documentclass[8pt]{article}
+\documentclass[8pt]{report}
 \usepackage{amsmath, xfrac, enumitem, graphicx, ulem, float, bigints, bm, textcomp}
+\usepackage{titlesec}
 \usepackage[margin=0.7in]{geometry}
 \graphicspath{ {images/} }
-\title{Strength of Materials GATE}\author{Kulasekaran}
 \linespread{0.8}
+\title{\Huge{\textsc{Strength of Materials - GATE}}}
+\author{\huge{\textbf{Kulasekaran}}}
 \begin{document}
 \maketitle
+\tableofcontents
 \begin{center}
-	\section*{\uwave{1. Properties Of Materials}}
+	\chapter{Properties of Materials}
+	\centering
 \end{center}
-\dashuline{\textbf{Basics}}\\
+\section{Basics}
 	\begin{itemize}
 		\item \textbf{Longitudinal Axis: }The Line passing through the center of all the planes along the longest dimension of the member is called as Longitudinal Axis. 
 		\item \textbf{Cross Sectional Area (CS): }The plane normal to the longitudinal axis of the object
 		\item \textbf{Prismatic Bar: }A member with constant cross-sectional area along its whole length
-	\end{itemize}\hrulefill\\\\
+	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-\dashuline{\textbf{Stress :-}}
+\section{Stress($\sigma$)}	
 	\begin{itemize}
 		\item \textbf{Stress($\sigma$): }The internal resisting force which resists deformation in object when a force in acting on it. $\sigma = \dfrac{F}{A}$
 		\begin{itemize}
@@ -29,12 +33,12 @@
 					\item Compressive stress ($\rightarrow\boxed{...}\leftarrow$) = Negative (-ve)
 				\end{itemize}
 			\item \textbf{Shear Stress($\tau$): }Stress acting tangential(parallel) to CS area.
-		\end{itemize}
+		\end{itemize}\hrulefill\\
 		\item \textbf{Engineering (or) Nominal Stress}
 			\begin{itemize}
 				\item[$\rightarrow$] $\boxed{\sigma_{Engg}=\dfrac{F}{A_0}}$
 				\item[$\rightarrow$] $A_0$ = Original CS Area. Its called Original because, when an object is developing stress, there will be deformation to the object will change the cross sectional area. But, if we are using the initial cross sectional area to calculate stress, then its called Engineering stress (or) Nominal stress (or) \textbf{Average stress}
-			\end{itemize}
+			\end{itemize}\hrulefill\\
 		\item \textbf{True stress (or) Actual stress}
 			\begin{itemize}
 				\item[$\rightarrow$] $\boxed{\sigma_{actual} = \dfrac{F}{A_a}}$
@@ -45,16 +49,16 @@
 					\end{itemize}
 			\end{itemize}
 		\item[$\implies$] In Tension $\boxed{\sigma_{True} > \sigma_{actual}}$  \hspace{1cm}$\implies$In Compression $\boxed{\sigma_{True} < \sigma_{actual}}$ 
-	\end{itemize}\hrulefill\\\\
+	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-\dashuline{\textbf{Strain($\epsilon$) :-}}
+\section{Strain($\in$)}
 	\begin{itemize}
-		\item $\boxed{\epsilon=\dfrac{Change\;in\;dimension}{Original\;dimension}=\dfrac{\Delta L}{L}}\implies \boxed{\epsilon_{Engg}=\dfrac{\Delta L}{L_0}} \implies \boxed{\epsilon_{actual}=\dfrac{\Delta L}{L_a}} \impliedby \boxed{L_{a}=L_0\pm\Delta L}$
+		\item $\boxed{\in=\dfrac{Change\;in\;dimension}{Original\;dimension}=\dfrac{\Delta L}{L}}\implies \boxed{\in_{Engg}=\dfrac{\Delta L}{L_0}} \implies \boxed{\in_{actual}=\dfrac{\Delta L}{L_a}} \impliedby \boxed{L_{a}=L_0\pm\Delta L}$
 		\item $L_a=L_0+\Delta L$ for Tension \hspace{1cm}$L_a=L_0-\Delta L$ for Compression
-		\item \textbf{Relationship between $\sigma_{Engg}\;\&\;\sigma_{actual}$ : }$\boxed{\sigma_{actual}=\sigma_{Engg}(1\pm\epsilon_{Engg})}\impliedby +ve(Tension)\;\&\;-ve(Compression)$
-	\end{itemize}\hrulefill\\\\
+		\item \textbf{Relationship between $\sigma_{Engg}\;\&\;\sigma_{actual}$ : }$\boxed{\sigma_{actual}=\sigma_{Engg}(1\pm\in_{Engg})}\impliedby +ve(Tension)\;\&\;-ve(Compression)$
+	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-\dashuline{\textbf{Stress-Strain curve :-}}
+\section{Stress-Strain curve}
 	\begin{itemize}
 		\item The Mechanical properties of materials used in engineering are determined using experiments performed on small specimens
 			\begin{itemize}
@@ -68,23 +72,471 @@
 					\includegraphics[scale=0.4]{stress-strain-curve.png}
 					\centering
 				\end{figure}
-				\item \textsc{A = Proportional Limit}
+				\item \underline{\textsc{A = Proportional Limit}}
 					\begin{itemize}
 						\item \textbf{Hooke's Law: } stress $\propto$ strain
 						\item Hooke's law is valid upto this point i.e., Linear variation of stress and strain upto A
 					\end{itemize}
-				\item \textsc{B = Elastic limit}
+				\item \underline{\textsc{B = Elastic limit}}
 					\begin{itemize}
 						\item Maximum stress upto which material can retain its original dimension upon load removal
 						\item Material behaves perfectly elastic up until B
 						\item Only Elastic or Elastoplastic deformation (Elastoplastic = both plastic and elastic deformation)
 					\end{itemize}
-				\item \textsc{C' = Upper Yield Point}
-				\item \textsc{C = Lower Yield Point}
-				\item \textsc{CD = Perfectly Plastic Region}
-				\item \textsc{DE = Strain Hardening Region}
-				\item \textsc{E = Ultimate Yield Point}
-				\item \textsc{F = Fracture Point}
+				\item \underline{\textsc{C' = Upper Yield Point}}
+					\begin{itemize}
+						\item Depends on CS area, shape of specimen and type of the test equipment. 
+						\item Has no practical significance
+					\end{itemize}
+				\item \underline{\textsc{C = Lower Yield Point}}
+					\begin{itemize}
+						\item Also called as actual yield point and stress at C is the Yield stress($\sigma_y$)
+						\item The yielding begins from this point
+					\end{itemize}
+				\item \underline{\textsc{CD = Perfectly Plastic Region}}
+					\begin{itemize}
+						\item Strain occurring without any increase in stress
+					\end{itemize}
+				\item \underline{\textsc{DE = Strain Hardening Region}}
+					\begin{itemize}
+						\item strain increases with faster rate in this region
+						\item material undergoes change in the crystalline structure
+					\end{itemize}
+				\item \underline{\textsc{E = Ultimate Yield Point}}
+					\begin{itemize}
+						\item Stress corresponding to this point is called Ultimate stres ($\sigma_U$)
+					\end{itemize}
+				\item \underline{\textsc{F = Fracture Point}}
+					\begin{itemize}
+						\item Stress corresponding to this point is called Ultimate  ($\sigma_F$)
+						\item Region between EF is called the \textbf{Necking region}, where the CS area is drastically reduced.
+					\end{itemize}
 			\end{itemize}
-	\end{itemize}
+		\item \textbf{Plastic Strain:} Strain before Yield point
+		\item \textbf{Elastic Strain:} Strain After Yield point
+		\item Fracture Strain($\in_F$) depends on Carbon content \%. If carbon($\uparrow$), fracture strain decreases
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Properties of Materials}
+	\subsection{Ductility}
+		\begin{itemize}
+			\item Large deformations are possible in ductile material before fracture
+			\item These materials have post-elastic strain greater than 5\%
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Brittleness}
+		\begin{itemize}
+			\item These materials have post-elastic strain less than 5\%
+			\item Fracture takes place immediately after elastic limit
+			\item Fracture and ultimate points are the same
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Malleability}
+		\begin{itemize}
+			\item The property that tells if a metal can be converted into thin sheet by pressing it. 
+			\item This property is great use in operations like forging, hot rolling, stamping, etc.,
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Hardness}
+		\begin{itemize}
+			\item Resistance to scratch or abrasion
+			\item Two methods of Hardness measurement:
+				\begin{itemize}
+					\item Mohr's test
+					\item Indentation hardness - Brinell, Rockwell, Vickers, Knoop
+				\end{itemize}
+		\end{itemize}\hrulefill	%-----------------------------------------------------------------------------------------%
+	\subsection{Toughness}
+		\begin{itemize}
+			\item Property which enables material to absorb energy without fracture.
+			\item If a material is tough it has ability to store large amount of strain energy before fracture. 
+			\item Ductile materials are tough and brittle materials are hard
+			\item \textbf{Modulus of Toughness: }Total strain energy per unit volume up until fracture
+			\item Modulus of Toughness = $\boxed{\dfrac{\sigma_y+\sigma_U}{2}*\in_F}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Creep}
+		\begin{itemize}
+			\item Permanent deformation in a material under constant loading after a long period of time
+			\item Factors affecting creep: Load magnitude, type of loading, age of loading, Temperature
+			\item \textbf{Homologous temperature: } Half of melting point, creep becomes appreciable at this temperature
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Stress relaxation}
+		\begin{itemize}
+			\item The reason why electric wires sag after a long period of time.
+			\item The stress gradually diminishes and reaches a constant value after a period of time. 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Elasticity}
+		\begin{itemize}
+			\item The property by which original dimensions can be recovered upon unloading is called elasticity
+			\item within elastic limit, the curve can be both linear and non-linear.
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Resilience}
+		\begin{itemize}
+			\item The total strain energy which can be stored in the given volume of the metal and can be released after unloading is called resilience.
+			\item Resilience = Area under stress-strain curve within elastic limit
+			\item \textbf{Modulus of resilience($U_r$): }Maximum elastic energy per unit volume. This occurs when elastic limit coincides with yield point. 
+			\item $\boxed{U_r= \dfrac{1}{2}*\sigma_y*\in_y=\dfrac{\sigma_y^2}{2E}}\impliedby \boxed{\in_y=\dfrac{\sigma_y}{E}}$			
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Proof stress}
+		\begin{itemize}
+			\item Some materials do not show clear yield point on the stress-strain curve. 
+			\item For such materials the yield point is calculated by offset method. 
+			\item A line parallel to the curve until the elastic limit is drawn starting from 0.2\% of the strain. This line meets the curve at a point and the corresponding stress at this point is called Proof stress.
+		\end{itemize}\hrulefill		%-----------------------------------------------------------------------------------------%
+	\section{Elasto-Plastic behaviour}
+		\begin{itemize}
+			\item during unloading if only part of the original dimension was recovered, then the remaining unrecoverable strain energy is called \textbf{Inelastic strain energy}
+			\item Beyond elastic limit, if a material undergoes continuous loading and unloading, then yield limit of material increases continuously
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Types of Material Behaviour}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Typesofmaterialbehaviour.png}
+		\end{figure}
+%-----------------------------------------------------------------------------------------%
+	\section{Fatigue}
+		\begin{itemize}
+			\item Materials behave differently under static and dynamic loading
+			\item Factors affecting fatigue: Loading, Temperature, Loading frequency, Corrosion, Stress concentration
+			\item \textbf{Fatigue Initiation life: }The number of load cycles required to initiate a surface crack
+			\item \textbf{Fatigue Propagation life: }The number additional load cycle required to propagate surface crack
+			\item \textbf{Endurance limit: }The stress below which material has no probability of cracking even with infinite load cycles. Endurance limit exists between elastic limit and yield point.
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Failure of Materials in Tension and Compression}
+	\subsection{Ductile Metals in Tension}
+		\begin{itemize}
+			\item Ductile materials are weak in shear
+			\item Cup and cone failure
+			\item failure plane angle is 45\textdegree
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Brittle Metals in Tension}
+		\begin{itemize}
+			\item Brittle materials are weak in tension
+			\item Failure plane angle is 90\textdegree
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Ductile Metals in Compression}
+		\begin{itemize}
+			\item Failure plane parallel to compressive load
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Brittle Metals in Compression}
+		\begin{itemize}
+			\item Brittle materials fail in shear
+			\item Failure plane angle is 45\textdegree
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Stress, Strain and Elastic Constants}
+	\section{Normal Stress}
+		\begin{itemize}
+			\item Stress acting perpendicular to the CS area
+			\item They are of two types: Direct axial stress, Bending stress
+		\end{itemize}
+		\subsection{Direct axial stress}
+			\begin{itemize}
+				\item These stress are produced when axial force is acting at CG of cross section
+			\end{itemize}
+		\subsection{Bending stress}
+			\begin{itemize}
+				\item Produced due to Bending moments. Bending stresses vary linearly from 0 at Neutral axis to Maximum at farthest fibre from Neutral Axis
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Shear (or) Tangential stress($\tau$)}
+		\begin{itemize}
+			\item Shear stress($\tau$) = $\boxed{\dfrac{ShearForce}{Area} = \dfrac{S}{A}}$
+			\item They are of two types: Direct shear, Torsional shear
+		\end{itemize}
+		\subsection{Direct shear stress}
+			\begin{itemize}
+				\item Due to direct shear force acting on the surface
+			\end{itemize}
+		\subsection{Torsional shear stress}
+			\begin{itemize}
+				\item Produced when a member is subjected to torsional moment (Twisting)
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Matrix representation of stress and strain}
+		\begin{itemize}
+			\item Stress and strain are called \textbf{tensor} quantities as are they are defined with respect to an area. They are 2nd order Tensors
+			\item In a 3D body, stress or strain at a point has 9 components (3 Normal and 6 shear)
+			\item In a 3D, there are 3 mutually perpendicular planes(xy,yz,xz). Each plane has 1 normal component and 2 shear component. 
+			\[ \boxed{stress = 
+   	 	\left[
+        \begin{array}{ccc}
+         	\sigma_{xx} & \tau_{xy} & \tau_{xz}\\
+         	\tau_{yx} & \sigma_{yy} & \tau_{yz}\\
+         	\tau_{zx} & \tau_{zy} & \sigma_{zz}
+       	\end{array}
+    		\right]}\hspace{2cm}
+    		\boxed{
+    		strain = 
+    		\left[
+        \begin{array}{ccc}
+         	\in_{xx} & \phi_{xy}/2 & \phi_{xz}/2\\
+         	\phi_{yx}/2 & \in_{yy} & \phi_{yz}/2\\
+         	\phi_{zx}/2 & \phi_{zy}/2 & \in_{zz}
+       	\end{array}
+    		\right]}
+		\]
+			\item Shear stresses in two mutually perpendicular directions are equal: $\tau_{yx} = \tau_{xy}\;\;\tau_{zx}=\tau_{xz}\;\;\tau_{yz}=\tau_{zy}$
+			\item Total shear strain in x-y plane: $\dfrac{\phi_{xy}}{2} + \dfrac{\phi_{yx}}{2} = \phi_{xy}$
+			\item Total shear strain in y-z plane: $\dfrac{\phi_{zy}}{2} + \dfrac{\phi_{yz}}{2} = \phi_{yz}$
+			\item Total shear strain in x-z plane: $\dfrac{\phi_{xz}}{2} + \dfrac{\phi_{zx}}{2} = \phi_{xz}$
+			\item $\in_{xx}, \in_{yy}, \in_{zz}$ are linear strains in x, y, z directions respectively
+			\item Under pure normal stress = Volume changes, shape remains same
+			\item Under pure shear stress = Volume remains same, shape changes.
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Strain Types}
+			\subsubsection{Axial Strain($\in$)}
+				\begin{itemize}
+					\item Strain the direction of the applied force. Also called as \textbf{Linear strain}
+					\item $\boxed{\in = \dfrac{Change\;in\;dimension}{original\;dimension} = \dfrac{\Delta L}{L}}$
+				\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+			\subsubsection{Lateral Strain($\in_L$)}
+				\begin{itemize}
+					\item Strain in the direction perpendicular to the applied force. 
+					\item Eg. When an object is stretched, its length increases, but its width and height decreases. This decrease in width and height is called Lateral strain. The increase in length is called Linear strain
+				\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+			\subsubsection{Shear strain($\phi$)}
+				\begin{itemize}
+					\item[] \includegraphics[scale=0.3]{shearstrain.png}
+					\item Angular deformation caused by shearing force, $\boxed{\phi = \dfrac{\Delta}{h}}$ 
+				\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Differential form of Strains}
+			\begin{itemize}
+				\item Consider a point P(x,y,z). A force acting on P, shifts its position to (u,v,w)
+				\item Then linear strains and shear strains are given by:
+				\item[$\implies$] $\boxed{\in_{xx} = \dfrac{\delta u}{\delta x}}\;\;\; \boxed{\in_{yy} = \dfrac{\delta v}{\delta y}}\;\;\; \boxed{\in_{zz} = \dfrac{\delta w}{\delta z}}\;\;\; \boxed{(\phi_{xy}=\phi_{yx})=\dfrac{\delta u}{\delta y} + \dfrac{\delta v}{\delta x}}\;\;\; \boxed{(\phi_{xz}=\phi_{zx})=\dfrac{\delta w}{\delta x} + \dfrac{\delta u}{\delta z}}\;\;\; \boxed{(\phi_{yz}=\phi_{zy})=\dfrac{\delta w}{\delta y} + \dfrac{\delta v}{\delta z}}\;\;\;$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Allowable stresses}
+		\begin{itemize}
+			\item \textbf{Strength: }The ability of a structure to resist loading is called strength. For safety reasons, materials should have higher strength than what is required due to loading. 
+			\item \textbf{Factor of Safety} = $\dfrac{Actual\;strength}{Strength\;required}$
+			\item \textbf{Allowable Stress ($\sigma_{A}$)} = $\boxed{\sigma_{A(ductile)}\dfrac{Yield\;stress}{FOS}} = \boxed{\sigma_{A(brittle)}\dfrac{Ultimate\;stress}{FOS}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Saint Venant's principle}
+		\begin{itemize}
+			\item This principle states that the stress distribution in a prismatic bar is uniform except in the region of extreme ends.
+			\item b = width of the prismatic bar
+			\item Section(1-1): $\dfrac{b}{2}$ distance from the extreme ends
+			\item Section(2-2): $\dfrac{b}{2} + \dfrac{b}{2}$ distance from the extreme ends
+			\item $\boxed{\sigma_{1-1}=1.387\sigma_{avg}}\;\;\;\boxed{\sigma_{2-2}=1.027\sigma_{avg}}\;\;\;\boxed{\sigma_{3-3}=\sigma_{avg}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Hooke's law}
+		\begin{itemize}
+			\item Assumptions: Homogeneous (made of same material), Isotropic (properties are same in all directions), elastic
+			\item Stress $\propto$ Strain $\implies \boxed{\dfrac{\sigma}{\in}=E} \impliedby$ (Valid upto Proportional limit)
+			\item E = Modulus of elasticity = slope of stress strain curve under proportional limit 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Elastic constants}
+		\subsection{Young's modulus(E)}
+			\begin{itemize}
+				\item $\boxed{E = \dfrac{Direct\;stress}{Direct\;strain} = \dfrac{\sigma}{\in}}$
+			\end{itemize}
+		\subsection{Shear modulus (or) Rigidity modulus(G)}
+			\begin{itemize}
+				\item $\boxed{G = \dfrac{Shear\;Stress}{Shear\;strain} = \dfrac{\tau}{\phi}}$
+			\end{itemize}
+		\subsection{Bulk modulus(k)}
+			\begin{itemize}
+				\item $\boxed{k = \dfrac{Volumetric\;stress}{Volumetric\;strain} = \dfrac{\sigma_{vol}}{\in_V}}\;\;\;$ $\boxed{\in_V = \dfrac{\Delta Volume}{Volume}}$ 
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Poisson's ratio($\mu$)}
+		\begin{itemize}
+			\item $\boxed{\mu = \dfrac{-Lateral\;strain}{Linear\;strain}}\impliedby$ (defined in elastic region)
+			\item $\mu$ = 0.05 - 1 (glass), 0.1 - 0.2 (concrete),0.25 - 0.42 (metals), 0.5 (pure rubber, perfectly plastic)
+			\item For non-elastic region, it is called \textbf{Contraction ratio}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Relationship between elastic constants}
+			\begin{itemize}
+				\item $\boxed{E = 3K(1-2\mu)}\;\;\;\boxed{E=2G(1+\mu)}\;\;\;\boxed{E = \dfrac{9KG}{3K+G}}\;\;\;\boxed{\mu = \dfrac{3K-2G}{6K+2G}}$
+				\item \textbf{Orthotropic material} = 9 elastic constants, \textbf{Anisotropic material} = 21 elastic constants
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Applications of Hooke's law}
+		\subsection{Effect of Uniaxial Loading}
+			\begin{itemize}
+				\item Consider a rectangular prismatic bar with tensile force acting along x-axis
+				\item[] $\boxed{\in_{xx} = \dfrac{\sigma_x}{E}} \implies \boxed{\in_{yy} = -\mu\dfrac{\sigma_x}{E}}\;\boxed{\in_{zz}=-\mu\dfrac{\sigma_x}{E}} \impliedby \in_{yy}\;\&\;\in_{zz}$ are Lateral strains
+			\end{itemize}
+		\subsection{Effect of Triaxial Loading}
+			\begin{itemize}
+				\item Consider: $\sigma_x$ acting along x-direction, $\sigma_y$ acting along x-direction, $\sigma_z$ acting along x-direction. (All are Tensile)
+				\item $\boxed{\in_{xx} = \dfrac{\sigma_x}{E} -\mu\dfrac{\sigma_y}{E} -\mu\dfrac{\sigma_z}{E}}\;\;\;$ $\boxed{\in_{yy} = \dfrac{\sigma_y}{E} -\mu\dfrac{\sigma_x}{E} -\mu\dfrac{\sigma_z}{E}}\;\;\;$ $\boxed{\in_{zz} = \dfrac{\sigma_z}{E} -\mu\dfrac{\sigma_x}{E} -\mu\dfrac{\sigma_y}{E}}$
+			\end{itemize}\hrulefill	%-----------------------------------------------------------------------------------------%
+	\section{Volumetric Strain($\in_V$)}
+		\begin{itemize}
+			\item How to derive?
+			\item compute the volume of the member. take that as V.
+			\item Now find $\Delta V$, that is differentiate V wrt to each factor.
+			\item Then use: $\boxed{\in_V = \in_x+\in_y+\in_z}$
+		\end{itemize}
+		\subsection{For Rectangular prismatic member}
+			\begin{itemize}
+				\item $\boxed{\dfrac{\sigma_x+\sigma_y+\sigma_z}{E}*(1-2\mu)}$
+			\end{itemize}
+		\subsection{For Cylindrical rod}
+			\begin{itemize}
+				\item $\boxed{\in_V=\in_L+2\in_d} \impliedby (\in_d$ = Diametrical strain)
+			\end{itemize}
+		\subsection{For Spherical body}
+			\begin{itemize}
+				\item $\boxed{\in_V=3\in_d}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Elongation in axially loaded members}
+		\begin{itemize}
+			\item How to derive?
+			\item consider an element and find its elongation using $\dfrac{PL}{AE}$, Then integrate that $\delta L$ for the whole length
+		\end{itemize}
+		\subsection{Axially loaded prismatic bar}
+			\begin{itemize}
+				\item In this case Elemental elongation is $\dfrac{P_xd_x}{A_xE_x} \impliedby d_x$ = Length of the element. 
+				\item $\boxed{\Delta = \dfrac{PL}{AE}}\;\;\;\;$ ($AE$ = Axial rigidity) and ($\dfrac{AE}{L}$ = Axial stiffness)
+			\end{itemize}
+		\subsection{Axially loaded Circular Tapered bar}
+			\begin{itemize}
+				\item Here Diamater of the element = $D_x = D_1+\dfrac{D_2-D_1}{L}x$
+				\item $\boxed{\Delta = \dfrac{4PL}{\pi E D_1D_2}} \impliedby D_1 =$ smaller diameter and $D_2$ = Larger diameter
+			\end{itemize}
+		\subsection{Axially loaded Rectangular Tapered bar}
+			\begin{itemize}
+				\item The thickness of the bar is uniform
+				\item $\boxed{\Delta = \dfrac{PL\log_e\left(\dfrac{B_2}{B_1}\right)}{(B_2-B_1)tE}} \impliedby$ ($B_1$ = Smaller height and $B_2$ = Larger height)
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Principle of Superposition}
+		\begin{itemize}
+			\item If a member is subjected to various loadings then the resultant deformation will be equal to the algebraic sum of the deformation caused by the individual forces acting on the member.
+			\item Consider the following example:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{superposition.png}
+			\end{figure}
+			\item Total elongation of the element($\Delta$) = $\Delta_{AB}+\Delta_{BC}+\Delta_{CD}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Elongation in Composite members}
+		\begin{itemize}
+			\item Composite structures are those that are made of more than one material
+		\end{itemize}
+		\subsection{Elongation in composite rectangular member}
+			\begin{itemize}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale=0.5]{compositebar.png}
+				\end{figure}
+				\item Condition of Equilibrium: $P = P_1+P_2$
+				\item As two materials are joined firmly: $\Delta_1 = \Delta_2 \implies \dfrac{P_1L_1}{A_1E_1} = \dfrac{P_2L_2}{A_2E_2}$
+				\item $\boxed{\Delta = \dfrac{PL}{A_1E_1+A_2E_2}}$ and $E_{eq} = \dfrac{A_1E_1+A_2E_2}{A_1+A_2} \implies \Delta = \dfrac{PL}{(A_1+A_2)E_{eq}}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Elongation due to Self-Weight}
+		\begin{itemize}
+			\item How to derive?
+			\item Find the elemental deflection due to the self weight and then Integrate for the whole length. 
+		\end{itemize}
+		\subsection{Rectangular Prismatic bar}		
+			\begin{itemize}
+				\item $\gamma = Unit\;weight = \dfrac{Weight}{unit\;volume}$
+				\item $W_x = \gamma (A*x) \impliedby W_x$ = Self weight acting at an element x distance away from the bottom of the bar				
+				\item $\boxed{\Delta = \dfrac{\gamma L^2}{2E}} \implies \boxed{\dfrac{WL}{2AE}}$
+			\end{itemize}
+		\subsection{Conical Bar}
+			\begin{itemize}
+				\item $\boxed{W_x = \gamma*\left(\dfrac{1}{3}\right)\pi\left(\dfrac{D_x}{2}\right)^2x}$ $\;\;\;\boxed{\Delta = \dfrac{\gamma L^2}{6E}}$
+			\end{itemize}
+		\subsection{Bar of Uniform strength}
+			\begin{itemize}
+				\item It is possible to maintain uniform stress at all the sections by increasing the area from the lower level to Higher level.
+				\item $\boxed{A_1=A_2e^{\left(\dfrac{\rho gL}{\sigma}\right)}}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Statically Indeterminate Axial Loaded structures}
+		\begin{itemize}
+			\item Those structures which cannot be solved using static equilibrium equations alone area called Statically Indeterminate structures
+			\item They can be solved using flexibility approach or stiffness approach
+			\item Flexibility approach involves equations using the relations in Slope, deflection and rotation and area called \textbf{compatibility equation}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Thermal stresses}
+		\begin{itemize}
+			\item \textbf{NOTE: }Thermal stresses do not depend on the area of cross section
+			\item Thermal Strain $\boxed{\in_{Th} = \alpha T} \impliedby (\alpha$ = Coefficient of thermal expansion)
+			\item Consider a rectangular prismatic bar of length L between fixed supports. If the temperature of the bar is raised, then $\Delta = 0$ (As the bar is fixed)
+			\item But due to rise in temperature of T\textdegree C, the bar will try to expand and so will be under compression
+			\item $\Delta = 0 = L\alpha T - \dfrac{\sigma_{Th} L}{E} \implies \boxed{\sigma_{Th} = E\alpha T} \impliedby$ (Thermal stresses are independent of member dimensions)
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Thermal stresses in Composite bars}
+			\begin{itemize}
+				\item Mostly we use three sets of relations 
+				\item $P_1 = P_2$ (under no other external load) $\implies \sigma_1A_1 = \sigma_2A_2$
+				\item $\Delta_1 = \Delta_2$
+				\item The material with larger $\alpha$ value, will tend to deform more under thermal load
+				\item Consider a composite cantilever bar made of copper and steel and both the materials are rigidly fixed to each other. Copper has higher coefficient of thermal expansion and so upon temperature rise will tend to expand more than steel. 
+				\item As a result, copper part will be under compression as steel is not letting it to expand and steel part will be under tension as copper is pulling it.
+				\item As they are affixed to each other rigidly, both their end deformation value will be the same. Using that relation we can write: Copper free expansion + contraction = steel free expansion + tension  $\implies \boxed{L\alpha_cT-\dfrac{\sigma_cL}{E_c}=L\alpha_sT+\dfrac{\sigma_sL}{E_s}}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Stresses in Nuts and Bolts}
+		\begin{itemize}
+			\item \textbf{Effect of Tightening of Nut}
+			\item P = pitch of screw on the bolt, $D_b$ = Bolt diameter
+			\item $A_s$ = Area of steel bolt = $\dfrac{\pi D_b^2}{4}$
+			\item $D_i$ = Inner diameter of copper tube, $D_O$ = Outer diameter of copper tube
+			\item $\theta$ = Nut is rotated by $\theta$\textdegree, n = Number of turns = $\dfrac{\theta}{360}$
+			\item np = Axial movement of nut
+			\item Total tensile for in bolt = total compressive force in copper tube $\implies \sigma_sA_s = \sigma_cA_c$
+			\item $\boxed{np = \left(\dfrac{\sigma_sL}{E_s}\right)+\left(\dfrac{\sigma_cL}{E_c}\right)}\impliedby$ Using the above relation, solve for $\sigma_s$ and $\sigma_c$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Strain Energy(U)}
+		\begin{itemize}
+			\item The strain energy is equal to the work done by the load provided no energy is added or subtracted in the form of heat.
+			\item \textbf{NOTE: } Strain energy of an elastic body due to more than one load cannot be found by simply adding the strain energy obtained from individual loads. In other words, The principle of superposition is not applicable on strain energy. This is because, Unlike deformation which is linear function, strain energy is a quadratic function. 
+			\item $\boxed{U = \dfrac{1}{2}P\Delta} \impliedby \Delta$ = Axial deflection 
+		\end{itemize}\hrulefill
+		\subsection{Strain energy in Prismatic bar}
+			\begin{itemize}
+				\item $\boxed{U = \dfrac{PL^2}{2AE}}$
+			\end{itemize}\hrulefill
+		\subsection{Strain energy in Prismatic bar of varying cross section}
+			\begin{itemize}
+				\item $\boxed{U = \dfrac{P^2}{2E}\left[\dfrac{L_1}{A_1}+\dfrac{L_2}{A_2}+...\right]}$
+			\end{itemize}\hrulefill
+		\subsection{Strain energy due to shear force}
+			\begin{itemize}
+				\item $\boxed{U = \int\dfrac{S_x^2dx}{2A_rG}}\implies (A_r$ = Reduced area)
+			\end{itemize}\hrulefill
+		\subsection{Strain energy in terms of principal stresses}
+			\begin{itemize}
+				\item $\boxed{U = \dfrac{1}{2E}(\sigma_1^2+\sigma_2^2-2\mu\sigma_1\sigma_2)} \impliedby$ (2D) $\;\;\;\boxed{U = \dfrac{1}{2E}\left[\sigma_1^2+\sigma_2^2+\sigma_3^2-2\mu(\sigma_1\sigma_2+\sigma_2\sigma_3+\sigma_3\sigma_1)\right]} \impliedby$ (3D)
+			\end{itemize}\hrulefill
+		\subsection{Strain energy due to Bending moment}
+			\begin{itemize}
+				\item $\boxed{U = \int\dfrac{M_x^2ds}{2EI}}\impliedby$ (I = MOI about NA)
+			\end{itemize}\hrulefill
+		\subsection{Strain energy due to Torque}
+			\begin{itemize}
+				\item $\boxed{U = \int\dfrac{T_x^2ds}{2GI_P}}\impliedby (I_P$ = Polar MOI)
+			\end{itemize}\hrulefill
 \end{document}
