@@ -712,18 +712,56 @@
 			\item Use the formula, $\bar{x} = \dfrac{\int xdA}{A}$ and $\bar{y}=\dfrac{\int ydA}{A}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Moment of Inertia}
+	\section{Moment of Inertia (I)}
 		\begin{itemize}
 			\item Normally Inertia means, from Newton's first law, it is the resistance to change  of state.
 			\item Moment of Inertia are of various types.
 				\begin{itemize}
 					\item Area Moment of Inertia -  Resistance to Bending
-					\item Mass Moment of Inertia - Resistance to Rotation
-					\item Polar Moment of Inertia - Resistance to Twisting
+					\item Mass Moment of Inertia - Resistance to Rotation (based on mass distribution)
+					\item Polar Moment of Inertia - Resistance to Twisting (based on Perpendicular axis theorem)
+					\item Product of Inertia - Resistance to Rotation (based on two perpendicular axes)
 				\end{itemize}
 			\item Here we are concerned with Area MOI and Polar MOI
 			\item Area MOI is also called as 2nd moment of Area. 
 			\item Area MOI is always Non-zero and Positive
+			\item Area MOI about x-axis = $\boxed{I_{x} = \int y^2dA}$
+			\item Area MOI about y-axis = $\boxed{I_{y} = \int x^2dA}$
+			\item The further a material is spread from its bending axis, the more resistant it is towards bending. See the figure below for better understanding.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{bending.png}
+			\end{figure}
+			\item In the figure above, the first bar is flatly laid. When a load is acting at its center, its more prone to bending and hence breaking compared to the same bar that is laid in a different position and subjected to the same load. 
+			\item Because, in the first bar, the material is less spread from the bending axis, compared to the second bar
+			\item This demonstrates why computing MOI is very important to consider the safety of structures. 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Steps to find Area MOI for any area}
+		\begin{itemize}
+			\item Consider elementary strip and find it's area (dA)
+			\item Use the above two formula with appropriate limits
+		\end{itemize}
+%-----------------------------------------------------------------------------------------%
+	\section{Product of Inertia ($I_{xy}$)}
+		\begin{itemize}
+			\item If $I_{xy} = 0$, then that axis is called \textbf{Principal axis}
+			\item Unlike Area MOI, Product of Inertia can be +ve, 0, -ve
+			\item Product of Inertia about any symmetrical axis will be zero
+			\item $\boxed{I_{xy} = \int xydA}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Parallel axis theorem}
+		\begin{itemize}
+			\item $\boxed{I_x = I_{xc} + Ad_1^2}\;\;\;\boxed{I_y = I_{yc} + Ad_2^2}\;\;\;\boxed{I_{xy} = I_{x_cy_c}+Ad_1d_2}$ 
+			\item $d_1$ = Distance of between x-axis and centroidal x-axis
+			\item $d_2$ = Distance between y-axis and centroidal y-axis
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Perpendicular axis theorem}
+		\begin{itemize}
+			\item The Polar moment of Inertia ($I_z$) is based on the perpendicular axis theorem which defines an Area MOI wrt to an axis that is perpendicular to the cross-sectional area
+			\item $\boxed{I_z = I_x + I_y}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \end{document}
