@@ -647,4 +647,83 @@
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \chapter{Centroid and Moment of Inertia}
+	\section{Centroid($\bm{\bar{x}}$,$\bm{\bar{y}}$)}
+		\begin{itemize}
+			\item $\boxed{\bar{x} = \dfrac{A_1\bar{x_1}+A_2\bar{x_2}+...+A_n\bar{x_n}}{A_1+A_2+...+A_n} = \sum_{i=1}^{n}\dfrac{A_i\bar{x_i}}{A_i} =\dfrac{\int xdA}{A}}\;\;\;\boxed{\bar{y}=\dfrac{A_1\bar{y_1}+A_2\bar{y_2}+...+A_n\bar{y_n}}{A_1+A_2+...+A_n} = \sum_{i=1}^{n}\dfrac{A_i\bar{y_i}}{A_i} =\dfrac{\int ydA}{A}}$
+			\item It is the center of a shape
+				\begin{itemize}
+					\item If the shape is Bi-Symmetrical, then the centroid will lie on the point of intersection of the two symmetrical axis. Eg. Rectangle, Square, Circle, etc.
+					\item If the shape is symmetrical about only one axis, then centroid will be anywhere on that symmetrical axis. Eg. Triangle
+				\end{itemize}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Finding centroid for a composite shape}
+		\begin{itemize}
+			\item A composite shape is a shape that is made of many regular shapes like: semicircle, circle, rectangle, square etc,
+			\item How to find Centroid for a composite shape? An example of composite shape is shown below
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{breakingcomposite.png}\\
+			\end{figure}
+			\item Break down the composite shapes into its regular shapes. Then form a table with the following columns: $$shape,\;\;Area(A),\;\;\bar{x},\;\;\bar{y},\;\;A\bar{x},\;\;A\bar{y}$$ 
+			\item Then find: $\sum A$, $\sum A\bar{x}$, $\sum A\bar{y}$ and then use, $\bar{x} = \dfrac{\sum A\bar{x}}{\sum A}$ and $\bar{y} = \dfrac{\sum A\bar{y}}{\sum A}$
+			\item For example, the above shape can be broken down into 4 parts as shown above: Triangle, Rectangle, Circle and Semi-circle
+			\item Now, we need to know 3 things about each of the shape above to compute the centroid of the whole shape. 
+				\begin{enumerate}
+					\item Area of the shape\hspace{1cm}$2.\;\bar{x}$\hspace{1cm}$3.\;\bar{y}$				
+				\end{enumerate}
+			\item For triangle: 
+				\begin{itemize}
+					\item[$\rightarrow$] Area:$\;\;\left(\dfrac{1}{2}*Base*Height\right) = \dfrac{1}{2}*8*5 = 20cm^2$
+					\item[$\rightarrow$] $\bar{x}$ = Base/2 (as the triangle is symmetrical about the y-axis) = 4cm
+					\item[$\rightarrow$] $\bar{y}$ = 10 + h/3 = (10+1.6667cm)
+						\begin{itemize}
+							\item 10 is added because, the triangle is at a height of 10cm from x-axis
+							\item Why $\bar{y}$ = h/3 ? Derived below:
+						\end{itemize}
+				\end{itemize}							
+		\end{itemize}
+	\subsection{Finding $\bar{y}$ for a triangle}
+		\begin{itemize}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{triangleybar.png}
+			\end{figure}
+			\item We know that $\boxed{\bar{y}=\dfrac{A_1\bar{y_1}+A_2\bar{y_2}+...+A_n\bar{y_n}}{A_1+A_2+...+A_n} = \sum_{i=1}^{n}\dfrac{A_i\bar{y_i}}{A_i} = \dfrac{\sum A_i\bar{y_i}}{A}}$
+			\item Here, Area = 20$cm^2$
+			\item Consider a horizontal element of thickness (dy) at a height of y from origin. 
+			\item The width of the element can be found using \textbf{Law of similar triangles} concept. Based on that: $$\dfrac{AG}{BC}=\dfrac{AF}{DE}\implies\dfrac{5}{8}=\dfrac{5-y}{b_y}\implies b_y = \dfrac{8(5-y)}{5}$$
+			\item Now, Area of this element is $A_i = b_ydy = \dfrac{8(5-y)}{5}dy$ and $\bar{y}_i = 10+y+\dfrac{dy}{2} \impliedby$ But already dy is very small. So dy/2 is negligble $\implies\bar{y}_i=10+y$ 
+			\item Applying the formula of $\bar{y}$ we get, 
+			\begin{align*}
+				\bar{y} &= \dfrac{\sum \dfrac{8(5-y)}{5}dy(10+y)}{20}\;\;=\;\; \dfrac{\bigintss_0^5\dfrac{8(5-y)}{5}(10+y)dy}{20}\\
+				&= \dfrac{1}{100}\int_0^5(40-8y)(10+y)dy\;\;=\;\;\dfrac{1}{100}\int_0^5 400+40y-80y-8y^2\;\;=\;\;\dfrac{1}{100}\int_0^5 400-40y-8y^2\\
+				&= \dfrac{8}{100}\int_0^5 50-5y-y^2\;\;=\;\;0.08*\left[50y-5\dfrac{y^2}{2}-\dfrac{y^3}{3}\right]_0^5\;\;=\;\;0.08*\left[50(5)-5(12.5)-\dfrac{125}{3}\right]\\
+				&= 0.08 * (145.833) = 11.667 \implies 10 + 1.667 \implies 10 + 5/3 \implies 10+h/3
+			\end{align*}						
+			\item Hence, $\bar{y}$ for a triangle is h/3
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Finding centroid for area under a given curve}
+		\begin{itemize}
+			\item Consider a vertical strip of thickness(dx) at a distance of x from origin and height(y)=f(x)
+			\item The area of this element will be dA = ydx = f(x)dx
+			\item Integrate this small area over the entire width of the curve and find Total area(A).
+			\item Use the formula, $\bar{x} = \dfrac{\int xdA}{A}$ and $\bar{y}=\dfrac{\int ydA}{A}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Moment of Inertia}
+		\begin{itemize}
+			\item Normally Inertia means, from Newton's first law, it is the resistance to change  of state.
+			\item Moment of Inertia are of various types.
+				\begin{itemize}
+					\item Area Moment of Inertia -  Resistance to Bending
+					\item Mass Moment of Inertia - Resistance to Rotation
+					\item Polar Moment of Inertia - Resistance to Twisting
+				\end{itemize}
+			\item Here we are concerned with Area MOI and Polar MOI
+			\item Area MOI is also called as 2nd moment of Area. 
+			\item Area MOI is always Non-zero and Positive
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 \end{document}
