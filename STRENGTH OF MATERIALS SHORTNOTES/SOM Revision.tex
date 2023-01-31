@@ -1,6 +1,6 @@
 \documentclass[8pt]{report}
 \usepackage{amsmath, xfrac, enumitem, graphicx, ulem, float, bigints, bm, textcomp}
-\usepackage{titlesec}
+\usepackage{titlesec, mathtools}
 \usepackage[margin=0.7in]{geometry}
 \graphicspath{ {images/} }
 \linespread{0.8}
@@ -220,12 +220,12 @@
 	\subsection{Brittle Metals in Tension}
 		\begin{itemize}
 			\item Brittle materials are weak in tension
-			\item Failure plane angle is 90\textdegree
+			\item Failure plane angle is 90\textdegree to load
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Ductile Metals in Compression}
 		\begin{itemize}
-			\item Failure plane parallel to compressive load
+			\item Failure plane anlge is 90\textdegree to load
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Brittle Metals in Compression}
@@ -326,6 +326,7 @@
 			\item \textbf{Strength: }The ability of a structure to resist loading is called strength. For safety reasons, materials should have higher strength than what is required due to loading. 
 			\item \textbf{Factor of Safety} = $\dfrac{Actual\;strength}{Strength\;required}$
 			\item \textbf{Allowable Stress ($\sigma_{A}$)} = $\boxed{\sigma_{A(ductile)}\dfrac{Yield\;stress}{FOS}} = \boxed{\sigma_{A(brittle)}\dfrac{Ultimate\;stress}{FOS}}$
+			\item A term called \textbf{Margin of safety} is used for aircrafts. Margin of safety = FOS - 1
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Saint Venant's principle}
@@ -472,9 +473,9 @@
 %-----------------------------------------------------------------------------------------%
 	\section{Statically Indeterminate Axial Loaded structures}
 		\begin{itemize}
-			\item Those structures which cannot be solved using static equilibrium equations alone area called Statically Indeterminate structures
+			\item Those structures which cannot be solved using static equilibrium equations alone are called Statically Indeterminate structures
 			\item They can be solved using flexibility approach or stiffness approach
-			\item Flexibility approach involves equations using the relations in Slope, deflection and rotation and area called \textbf{compatibility equation}
+			\item Flexibility approach involves equations using the relations in Slope, deflection and rotation and are called \textbf{compatibility equation}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Thermal stresses}
@@ -512,7 +513,7 @@
 	\section{Strain Energy(U)}
 		\begin{itemize}
 			\item The strain energy is equal to the work done by the load provided no energy is added or subtracted in the form of heat.
-			\item \textbf{NOTE: } Strain energy of an elastic body due to more than one load cannot be found by simply adding the strain energy obtained from individual loads. In other words, The principle of superposition is not applicable on strain energy. This is because, Unlike deformation which is linear function, strain energy is a quadratic function. 
+			\item \textbf{NOTE: } Strain energy of an elastic body due to more than one load cannot be found by simply adding the strain energy obtained from individual loads. In other words, \textbf{The principle of superposition is not applicable on strain energy}. This is because, Unlike deformation which is linear function, strain energy is a quadratic function. 
 			\item $\boxed{U = \dfrac{1}{2}P\Delta} \impliedby \Delta$ = Axial deflection 
 		\end{itemize}\hrulefill
 		\subsection{Strain energy in Prismatic bar}
@@ -739,17 +740,61 @@
 %-----------------------------------------------------------------------------------------%
 	\subsection{Steps to find Area MOI for any area}
 		\begin{itemize}
-			\item Consider elementary strip and find it's area (dA)
+			\item Consider elementary strip (horizontal strip for $I_x$ and vertical strip for $I_y$) and find it's area (dA)
 			\item Use the above two formula with appropriate limits
 		\end{itemize}
-%-----------------------------------------------------------------------------------------%
-	\section{Product of Inertia ($I_{xy}$)}
+	\subsection{Finding Area MOI for a rectangle about its centroidal axis}
 		\begin{itemize}
-			\item If $I_{xy} = 0$, then that axis is called \textbf{Principal axis}
-			\item Unlike Area MOI, Product of Inertia can be +ve, 0, -ve
-			\item Product of Inertia about any symmetrical axis will be zero
-			\item $\boxed{I_{xy} = \int xydA}$
-		\end{itemize}\hrulefill
+			\item Remember: $(\;\int_{-a}^a(even\;function) = 2\int_0^a(even\;function))$
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{rectangleMOI_Ix.png}\hspace{3cm}
+				\includegraphics[scale=0.4]{rectangleMOI_Iy.png}
+			\end{figure}
+		\end{itemize}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{c|c}
+					{$\begin{aligned}
+					dA&=b(dy)\\
+					We\;know\;I_x &= \int y^2dA\\
+					I_x &= \int_{-d/2}^{d/2}y^2(bdy) = 2b\int_0^{d/2}y^2dy\\
+					I_x &= 2b\left(\dfrac{y^3}{3}\right)_0^{d/2} = 2b\left(\dfrac{d^3}{8*3}\right)\\
+					\Aboxed{I_x &= \dfrac{bd^3}{12}}
+					\end{aligned}$}&
+					
+					{$\begin{aligned}
+					dA &= d(dx)\\
+					We\;know\;I_y &= \int x^2dA\\
+					I_y &= \int_{-b/2}^{b/2}x^2(d(dx)) = 2d\int_{0}^{b/2}x^2dx \\
+					I_y &= 2d\left(\dfrac{x^3}{3}\right)_0^{b/2} = 2d\left(\dfrac{b^3}{8*3}\right)\\
+					\Aboxed{I_y &= \dfrac{db^3}{12}}
+					\end{aligned}$}
+				\end{tabular}
+			\end{table}
+	\subsection{Finding Area MOI for a rectangle with origin at bottom left corner}
+		\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{rectangleMOIcorner_Ix.png}\hspace{3cm}
+				\includegraphics[scale=0.4]{rectangleMOIcorner_Iy.png}
+		\end{figure}
+		\begin{table}[H]
+				\centering
+				\begin{tabular}{c|c}
+					{$\begin{aligned}
+					I_x &= \int_{0}^{d}y^2(bdy) = b\int_0^{d}y^2dy\\
+					I_x &= b\left[\dfrac{y^3}{3}\right]_0^{d} = \dfrac{bd^3}{3}
+					\end{aligned}$}&
+					
+					{$\begin{aligned}
+					I_y &= \int_{0}^{b}x^2(d(dx)) = d\int_{0}^{b}x^2dx \\
+					I_y &= d\left[\dfrac{x^3}{3}\right]_0^{b} = \dfrac{db^3}{3}
+					\end{aligned}$}
+				\end{tabular}
+		\end{table}
+		\begin{itemize}
+			\item The above can also be solved using Parallel axis theorem, since the axis $I_x$ is parallel to the centroidal axis $I_{x_c}$ and the axis $I_y$ is parallel to the centroidal axis $I_{y_c}$
+		\end{itemize}
 %-----------------------------------------------------------------------------------------%
 	\section{Parallel axis theorem}
 		\begin{itemize}
@@ -758,10 +803,82 @@
 			\item $d_2$ = Distance between y-axis and centroidal y-axis
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
+	\subsection{Finding Area MOI of rectangle with origin at bottom right corner using Parallel axis theorem}
+		\begin{itemize}
+			\item We have derived that Area MOI of the rectangle(b*d) about its centroidal axis is:
+			\item $\boxed{I_{x_c} = \dfrac{bd^3}{12}}\;\;\;\boxed{I_{y_c} = \dfrac{db^3}{12}}$
+			\item Now using the above result, we can find $I_x$ and $I_y$ that is parallel to their respective centroidal axis as follows:
+		\end{itemize}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|c}
+				${\begin{aligned}
+				I_x &= I_{x_c} + Ad_1^2 \impliedby (Here\;d_1=d/2)\\
+				I_x &= \dfrac{bd^3}{12} + (b*d)\left(\dfrac{d}{2}\right)^2\\
+				I_x &= \dfrac{bd^3}{12} + \dfrac{bd^3}{4}\\
+				\implies \Aboxed{I_x &= \dfrac{bd^3}{3}}		
+				\end{aligned}}$
+				&
+				${\begin{aligned}
+				I_y &= I_{y_c} + Ad_2^2 \impliedby (Here\;d_2=b/2)\\
+				I_y &= \dfrac{db^3}{12} + (b*d)\left(\dfrac{b}{2}\right)^2\\
+				I_y &= \dfrac{db^3}{12} + \dfrac{db^3}{4}\\
+				\implies \Aboxed{I_y &= \dfrac{db^3}{3}}
+				\end{aligned}}$
+			\end{tabular}
+		\end{table}
+		\begin{itemize}
+			\item From the above, it is evident how necessary and useful it is to remember the Area MOI of regular shapes about their centroidal axis as it can greatly help in deriving their Area MOI about any axis that is parallel to their centroidal axis. 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%	
+	\section{Product of Inertia ($I_{xy}$)}
+		\begin{itemize}
+			\item If $I_{xy} = 0$, then that axis is called \textbf{Principal axis}
+			\item Unlike Area MOI, Product of Inertia can be +ve, 0, -ve
+			\item Product of Inertia about any symmetrical axis will be zero
+			\item $\boxed{I_{xy} = \int xydA}$
+		\end{itemize}
+		\begin{table}[H]
+		\centering
+		\begin{tabular}{cc}
+			\parbox{5cm}{\includegraphics[scale=0.4]{rectangleMOI_Ix.png}} 
+			& \parbox{7cm}{
+			\begin{align*}
+				I_{x_cy_c} &= \int \bar{x}\bar{y}dA = \int_{-d/2}^{d/2} \left(\dfrac{b}{2}\right)y(bdy)\\
+				I_{x_cy_c} &= b^2\left[\dfrac{y^2}{2}\right]_{-d/2}^{d/2}\\
+				I_{x_cy_c} &= b^2(0) = 0\;\;\;(As\;x_c\;and\;y_c\;are\;Symmetrical\;axis)
+			\end{align*}}
+		\end{tabular}
+	\end{table}\hrulefill
+%-----------------------------------------------------------------------------------------%
 	\section{Perpendicular axis theorem}
 		\begin{itemize}
 			\item The Polar moment of Inertia ($I_z$) is based on the perpendicular axis theorem which defines an Area MOI wrt to an axis that is perpendicular to the cross-sectional area
-			\item $\boxed{I_z = I_x + I_y}$
+			\item $\boxed{I_z = I_x + I_y}\implies$ $I_z = \int \rho^2dA = \int (x^2+y^2)dA = \int x^2dA + \int y^2dA = I_y + I_x$
+			\item It is based on Pythagorean theorem
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{perpendiculartheorem.png}
+			\end{figure}
+			\item This can be used to calculate indirectly the Area MOI of a circle of radius R about its centroidal axes
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
+	\subsection{Finding Area MOI of a circle about its centroidal axes using $I_z$}
+		\begin{table}[H]
+		\centering
+		\begin{tabular}{cc}
+			\parbox{5cm}{\includegraphics[scale=0.5]{circleMOI.png}} 
+			& \parbox{7cm}{
+			\begin{align*}
+				We\;know,\;I_z&=\int\rho^2dA\\
+			Here,\;dA&=\pi(\rho+d\rho)^2-\pi\rho^2 = \pi(\rho^2+(d\rho)^2+2\rho d\rho-\rho^2)\\
+			\implies dA &= \pi 2\rho d\rho\\
+			I_z &= \int_0^R\rho^2(\pi 2\rho d\rho) = 2\pi\int_0^R\rho^3d\rho\\
+			I_z &= 2\pi\left[\dfrac{\rho^4}{4}\right]_0^R = \dfrac{\pi R^4}{2}\\
+			I_z &= I_x + I_y \implies  \dfrac{\pi R^4}{2} =  \dfrac{\pi R^4}{4} +  \dfrac{\pi R^4}{4}\\
+			So,\;\Aboxed{I_x &= I_y =  \dfrac{\pi R^4}{4} =  \dfrac{\pi D^4}{64}}
+			\end{align*}}
+		\end{tabular}
+	\end{table}\hrulefill	
+%-----------------------------------------------------------------------------------------%	
 \end{document}
