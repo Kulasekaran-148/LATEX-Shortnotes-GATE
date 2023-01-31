@@ -879,6 +879,32 @@
 			So,\;\Aboxed{I_x &= I_y =  \dfrac{\pi R^4}{4} =  \dfrac{\pi D^4}{64}}
 			\end{align*}}
 		\end{tabular}
-	\end{table}\hrulefill	
+	\end{table}\hrulefill
 %-----------------------------------------------------------------------------------------%	
+	\section{Rotation of Axes}
+		\begin{itemize}
+			\item $\boxed{I_{x'} = \left(\dfrac{I_x+I_y}{2}\right)+\left(\dfrac{I_x-I_y}{2}\right)cos2\theta-I_{xy}sin2\theta}\;\;\;\boxed{I_{y'} = \left(\dfrac{I_x+I_y}{2}\right)-\left(\dfrac{I_x-I_y}{2}\right)cos2\theta+I_{xy}sin2\theta}$
+			\item $\boxed{I_{x'y'} = \left(\dfrac{I_x-I_y}{2}\right)sin2\theta+I_{xy}cos2\theta}$
+			\item The above three formulae help us to find the Area MOI of any shape about an axis that is tilted at an anticlockwise angle of $\theta$\textdegree from one of the centroidal axis. 		
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Principal Moment of Inertia($I_1,I_2$)}
+			\begin{itemize}
+				\item $\boxed{I_1,I_2 = \left(\dfrac{I_x+I_y}{2}\right)\pm\sqrt{\left(\dfrac{I_x-I_y}{2}\right)^2+(I_{xy})^2}}$
+				\item Principal MOI denote the maximum($I_1$) and minimum($I_2$) Area MOI of a planar section
+				\item The position of these principal Area MOI can be found using:
+				\item $\boxed{\theta_{P_1} = \dfrac{tan^{-1}\left(\dfrac{-2I_{xy}}{I_x-I_y}\right)}{2}}\;\;\;\boxed{\theta_{P_2} = \theta_{P_1}+90\deg}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Radius of Gyration(k)}
+		\begin{itemize}
+			\item It is the theoretical distance at which we can condense the entire area of cross section into a narrow strip and have the same Area MOI.
+		\item $\boxed{k = \sqrt{\dfrac{I_x}{A}}}$
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{radiusofgyration.png}
+		\end{figure}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Bending stresses in Beams}	
 \end{document}
