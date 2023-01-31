@@ -726,9 +726,9 @@
 			\item Here we are concerned with Area MOI and Polar MOI
 			\item Area MOI is also called as 2nd moment of Area. 
 			\item Area MOI is always Non-zero and Positive
-			\item Area MOI about x-axis = $\boxed{I_{x} = \int y^2dA}$
-			\item Area MOI about y-axis = $\boxed{I_{y} = \int x^2dA}$
+			\item Area MOI about x-axis = $\boxed{I_{x} = \int y^2dA}\;\;\;$ Area MOI about y-axis = $\boxed{I_{y} = \int x^2dA}$
 			\item The further a material is spread from its bending axis, the more resistant it is towards bending. See the figure below for better understanding.
+			\item The Area MOI of a section is lowest if it is taken about an axis passing through the centroid of the section
 			\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.4]{bending.png}
@@ -894,6 +894,7 @@
 				\item Principal MOI denote the maximum($I_1$) and minimum($I_2$) Area MOI of a planar section
 				\item The position of these principal Area MOI can be found using:
 				\item $\boxed{\theta_{P_1} = \dfrac{tan^{-1}\left(\dfrac{-2I_{xy}}{I_x-I_y}\right)}{2}}\;\;\;\boxed{\theta_{P_2} = \theta_{P_1}+90\deg}$
+				\item If an area has axis of symmetry, then product of inertia about those axes will be zero. Hence such axis must be principal axes. \textbf{Symmetrical axis is always principal, but the reverse is not true}
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Radius of Gyration(k)}
@@ -907,4 +908,83 @@
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \chapter{Bending stresses in Beams}	
+	\section{Effect of Bending}
+		\begin{itemize}
+			\item \textbf{Neutral Axis} : The transverse axis about which the CS area rotates is called Neutral Axis. In pure bending, the NA always passes through the centroid. In plastic bending, NA passes through equal area axis.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{effectofbending.png}
+			\end{figure}
+			\item Hence, a rectangular section before bending will be trapezoidal section after bending. But such deformations in CS area (called transverse deformations since they are perpendicular to the applied) are very small and so negligible. So for all practical purposes, the CS area can be considered to be rectangular even after bending.
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Simple bending or Pure bending}
+		\begin{itemize}
+			\item If the bending moment is constant along a portion of the beam, then that portion is said to be under pure bending. $\implies \dfrac{dM}{dx} = 0 \implies SF = 0$
+		\end{itemize}
+		\subsection{Assumptions in Theory of pure bending}
+			\begin{itemize}
+				\item Material is \textbf{Homogeneous, Isotropic and linearly elastic}
+				\item The beam is \textbf{Prismatic} and \textbf{straight} before loading
+				\item The \textbf{Young's modulus(E) is same for tension and compression}
+				\item Plane section before bending remains plane section after bending $\implies$ Longitudinal strain vary linearly from zero at NA to max at the surface. $\boxed{Longitudinal\;strain\propto Distance\;of\;the\;fibre\;from\;NA}$
+				\item The section of the beam is symmetrical in the loading plane. If asymmetrical, then twisting and warping may occur along with bending. 
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Equation of Pure bending}
+		\begin{itemize}
+			\item[] $$\boxed{\dfrac{M}{I} = \dfrac{\sigma}{y} = \dfrac{E}{R}}$$
+			\item R = Radius of curvature
+			\item I = Area MOI of CS about NA 
+			\item M = Bending Moment
+			\item $\sigma$ = Bending stress in a fibre at a distance y from NA
+			\item E = Modulus of Elasticity
+			\item \textbf{Limitation of Pure bending eqn: }Applicable only in case of pure bending
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Nature of Bending stress}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{natureofbending.png}
+		\end{figure}
+		\begin{itemize}
+			\item \fbox{Total compressive force = Average stress * Area under compression}
+			\item \fbox{Total Tensile force = Average stress * Area under Tension}
+			\item Average stress is nothing but the stress calculated using the pure bending equation. $\boxed{\sigma = \dfrac{M}{I}y}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Section Modulus(Z)}
+		\begin{itemize}
+			\item Represents the strength of the section
+			\item It is the ratio of Area MOI of the beam's Cross section about NA to the distance of the extreme fibre from NA. 
+			\item $\implies \boxed{Z = \dfrac{I}{y_{max}}}$ Unit: $mm^3$
+			\item If Section modulus is known, then Max Bending stress: $\boxed{\sigma_{max} = \dfrac{M}{Z}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Moment of Resistance ($M_R$)}
+		\begin{itemize}
+			\item Represents the Max Bending moment that can be resisted by the section without failure
+			\item $\boxed{M_R=\sigma_PZ} \impliedby$ (Valid only for Symmetrical section about NA, $\sigma_P$ = Permissible stres)
+			\item If section is asymmetrical (Eg. T section), $\boxed{M_{R_1} = \sigma_cZ_c}$ and $\boxed{M_{R_2} = \sigma_tZ_t}$. The $M_R$ will be the lesser of the two values. 
+			\item[$\implies$] $\sigma_c,\sigma_t$ are permissible bending stress in compression and Tension respectively 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Bending Stresses in Axially loaded beams}
+		\begin{itemize}
+			\item Direct Axial Load: $\boxed{\sigma = \pm\dfrac{M}{I}y\pm\dfrac{P}{A}} \impliedby$ (P = Axial load)
+			\item Eccentric Axial Load: $\boxed{\sigma = \pm\dfrac{M}{I}y\pm\dfrac{P}{A}\pm\dfrac{Pe}{I}y} \impliedby$ (e = Eccentricity)
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%	
+	\section{Forces on Partial Area of a Section}
+		\begin{itemize}
+			\item The force on a partial area of a cross section can be found by using similar triangles concept on the stress diagram when Max bending stress($\sigma_{max}$) is known
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{forcepartial.png}
+			\end{figure}
+			\item From the above diagram, $\boxed{\sigma = \dfrac{\sigma_{max}}{y_{max}}y}$
+			\item We know, $Stress=\dfrac{Force}{Area}$. So, Force = Stress * Area
+			\item So, $dF = \sigma dA = \dfrac{\sigma_{max}}{y_{max}}ydA \implies$ $F = \dfrac{\sigma_{max}}{y_{max}}\int ydA = \boxed{\dfrac{\sigma_{max}}{y_{max}}A\bar{y}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%			
 \end{document}
