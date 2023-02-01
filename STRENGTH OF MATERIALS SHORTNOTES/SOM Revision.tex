@@ -563,7 +563,8 @@
 				\item Fixed support - $R_x,R_y,R_z,M_x,M_y.M_z$
 				\item Hinged support - $R_x,R_y,R_z$
 				\item Roller support - $R$
-			\end{itemize}\hrulefill			%-----------------------------------------------------------------------------------------%
+			\end{itemize}\hrulefill			
+%-----------------------------------------------------------------------------------------%
 	\section{Types of Beams}
 		\begin{itemize}
 			\item Simply supported beam
@@ -609,7 +610,8 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.4]{curvetracing.png}
-			\end{figure}\hrulefill	%-----------------------------------------------------------------------------------------%
+			\end{figure}\hrulefill
+%-----------------------------------------------------------------------------------------%
 	\section{SFD and BMD by Integration}
 		\begin{itemize}
 			\item Use the relations between Loading rate, shear force and Bending moment:
@@ -628,7 +630,8 @@
 				\centering
 				\includegraphics[scale=0.5]{concmoment}
 			\end{figure}
-		\end{itemize}\hrulefill	%-----------------------------------------------------------------------------------------%
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 	\section{Loading diagram and BMD from SFD}
 		\begin{itemize}
 			\item In SFD, the portion where SF is constant, it means no load is acting in that portion
@@ -683,7 +686,8 @@
 							\item Why $\bar{y}$ = h/3 ? Derived below:
 						\end{itemize}
 				\end{itemize}							
-		\end{itemize}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 	\subsection{Finding $\bar{y}$ for a triangle}
 		\begin{itemize}
 			\begin{figure}[H]
@@ -748,8 +752,8 @@
 			\item Remember: $(\;\int_{-a}^a(even\;function) = 2\int_0^a(even\;function))$
 			\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.4]{rectangleMOI_Ix.png}\hspace{3cm}
-				\includegraphics[scale=0.4]{rectangleMOI_Iy.png}
+				\includegraphics[scale=0.35]{rectangleMOI_Ix.png}\hspace{3cm}
+				\includegraphics[scale=0.35]{rectangleMOI_Iy.png}
 			\end{figure}
 		\end{itemize}
 			\begin{table}[H]
@@ -771,7 +775,8 @@
 					\Aboxed{I_y &= \dfrac{db^3}{12}}
 					\end{aligned}$}
 				\end{tabular}
-			\end{table}
+			\end{table}\hrulefill
+%-----------------------------------------------------------------------------------------%
 	\subsection{Finding Area MOI for a rectangle with origin at bottom left corner}
 		\begin{figure}[H]
 				\centering
@@ -1127,7 +1132,7 @@
 			\item $\tau_{avg}$ occurs at ???
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-\subsection{Shear Stress distribution in Circular section}
+	\subsection{Shear Stress distribution in Circular section}
 		\begin{itemize}
 			\item $\boxed{\tau_{max} = \dfrac{4S}{3\pi R^2}}\;\;\;\boxed{\tau_{max} = \dfrac{4}{3}\tau_{avg}}$
 			\item Shear stress at centroid is $\dfrac{4}{3}$ times the Avg Shear stress
@@ -1135,9 +1140,127 @@
 			\item $\tau_{avg}$ occurs at $\pm\dfrac{R}{2}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-\subsection{Shear Stress distribution in I-section}
+	\subsection{Shear Stress distribution in I-section}
 		\subsubsection{Shear stress distribution in Flange}
+			\begin{itemize}
+				\item
+			\end{itemize}
 		\subsubsection{Shear stress distribution in Web}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Shear stresses in composite sections}
+		\begin{itemize}
+			\item Convert the given section into its equivalent section of any one material using the \textbf{modular ratio (m)} and then apply the formula $\dfrac{SA\bar{y}}{Ib}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Shear Center}
+		\begin{itemize}
+			\item For transverse load acting on the plane of symmetry of a a symmetrical cross section beam, the beam will bend without twisting. 
+			\item But that's not the case with asymmetrical beam. For symmetrical beam to bend without twisting, the load must act at a point called \textbf{Shear center}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Shear stress distribution in Thin walled open cross sections}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear stresses in wide flange beams}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear stresses in Channel section}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear stresses in Angle section}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear stresses in Z-Section}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Principal Stress-Strain \& Failure Theories}
+	\section{Principal stress and Principal planes}
+		\begin{itemize}
+			\item \textbf{Principal Plane: }A plane in which only Normal stresses are acting and Shear stresses are zero
+			\item \textbf{Principal stress: }Normal stresses acting on mutually perpendicular planes on which shear stresses are zero
+			\begin{itemize}
+				\item \textbf{Major Principal stress($\sigma_1$): }Max value of such normal stress
+				\item \textbf{Major Principal stress($\sigma_2$): }Min value of such normal stress
+			\end{itemize}\hrulefill
+		\end{itemize}
+%-----------------------------------------------------------------------------------------%
+	\section{Methods to find Principal planes and Principal stresses}
+		\begin{enumerate}
+			\item Analytical method
+			\item Graphical method (Mohr's circle)
+		\end{enumerate}\hrulefill			
+%-----------------------------------------------------------------------------------------%
+	\section{Four cases of Stress combinations}
+		\begin{enumerate}
+			\item Member subjected to Uni-axial stress
+			\item Member subjected to Bi-axial stress in mutually perpendicular directions
+			\item Member subjected to pure shear stresses
+			\item Member subjected to Bi-axial stresses in mutually perpendicular directions as well as shear stresses
+		\end{enumerate}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Analytical method to solve for Principal stresses \& Principal planes}
+	\subsection{Member subjected to Uni-axial stress}
+		\begin{itemize}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{case1.png}
+			\end{figure}						
+			\item Normal stress due to the force $P_x$ acting on $A_{abcd} = \sigma_x = \dfrac{Px}{A_{abcd}}$
+			\item But what is the normal stress acting on an oblique plane like (abwx) ?
+			\item Let the normal stress acting on the oblique plane (abwx) be $\sigma_{ob} \implies \sigma_{ob} = \dfrac{P_n}{A_{abwx}}$ 
+			\item The force $P_x$ is resolved into two components. $P_n$ is the normal force acting on the oblique plane (abwx) and $P_t$ is the tangential force acting along the oblique plane (abwx)
+			\item By resolution of $P_x$, $\boxed{P_n = P_xSin(90-\theta) = P_xCos\theta}\;\;\;\boxed{P_t = P_xCos(90-\theta) = P_xSin\theta}$
+			\item $Cos\theta = \dfrac{A_{abcd}}{A_{abwx}} \implies \boxed{A_{abwx} = \dfrac{A_{abcd}}{Cos\theta}}$
+		  \item So, The normal stress ($\sigma_{ob}$) acting on the plane (abwx) is given by: $$\boxed{\sigma_{ob} = \dfrac{P_n}{A_{abwx}} = \dfrac{P_xCos\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xCos^2\theta}{A_{abcd}} \implies \boxed{\sigma_{ob} = \sigma_{x}Cos^2\theta}}$$
+		  \item $\sigma_{ob}$ is max when $\theta$ is 0\textdegree , 180\textdegree ... $\impliedby$ (Because at these angles Cos is max)
+		  \item Similarly, Tangential stress ($\tau_{ob}$) acting along the plane (abwx) is given by: $$\boxed{\tau_{ob} = \dfrac{P_t}{A_{abwx}} = \dfrac{P_xSin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xSin\theta Cos\theta}{A_{abcd}} \implies \boxed{\tau_{ob} = \dfrac{\sigma_x}{2}Sin2\theta}}$$
+		  \item $\tau_{ob}$ is max when $\theta$ is 45\textdegree , 135\textdegree ... $\impliedby$ (Because at these angles Sin is max)
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction}
+		\begin{itemize}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{case2.png}
+			\end{figure}
+			\item From Diagram(2) above, $\boxed{\sin\theta = \dfrac{A_{dcwx}}{A_{abwx}}}_{(1)}\;\;\;\boxed{\cos\theta = \dfrac{A_{abcd}}{A_{abwx}}}_{(2)}$	
+			\item $\boxed{\sigma_x=\dfrac{P_x}{A_{abcd}}}_{(3)}\;\;\;\boxed{\sigma_y = \dfrac{P_y}{A_{cdwx}}}_{(4)}\;\;\;\boxed{\tau=\dfrac{P_y}{A_{abcd}}}_{(5)}\implies\boxed{P_x=\sigma_x A_{abcd}}_{(6)}\;\;\;\boxed{P_y=\sigma_y A_{dcwx}}_{(7)}$
+			\item From Diagram(3):
+			\begin{itemize}
+				\item Resolving $P_x$ into $P_{nx}$ and $P_{tx} \implies \boxed{P_{nx} = P_xSin(90-\theta) = P_xCos\theta}\;\;\;\boxed{P_{tx} = P_xCos(90-\theta) = P_xSin\theta}$
+				\item Resolving $P_y$ into $P_{ny}$ and $P_{ty} \implies \boxed{P_{ny} = P_yCos(90-\theta) = P_ySin\theta}\;\;\;\boxed{P_{ty} = P_ySin(90-\theta) = P_yCos\theta}$
+			\end{itemize}							
+			\item $\sigma_{ob} = \dfrac{P_{nx} + P_{ny}}{A_{abwx}} = \dfrac{P_xCos\theta + P_ySin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xCos^2\theta + P_ySin\theta Cos\theta}{A_{abcd}} = \boxed{\pmb{\sigma_x Cos^2\theta + \tau Sin\theta Cos\theta}}$ (Using (3) \& (5))
+			\item $\tau_{ob} = \dfrac{P_{ty} - P_{tx}}{A_{abwx}} = \dfrac{P_yCos\theta - P_xSin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_yCos^2\theta - P_xSin\theta Cos\theta}{A_{abcd}} = \boxed{\pmb{\tau Cos^2\theta -\sigma_x Sin\theta Cos\theta}}$ (Using (3) \& (5))		
+			\item (Alt)$\sigma_{ob} = \dfrac{P_x\cos\theta + P_y\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta + \sigma_yA_{dcwx}\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta}{A_{abwx}}+\dfrac{\sigma_yA_{dcwx}\sin\theta}{A_{abwx}}$ (Using (6) \& (7))
+			\item[$\implies$] (Using (1) \& (2)) $\sigma_x\cos^2\theta + \sigma_y\sin^2\theta = \sigma_x\left[\dfrac{1+\cos 2\theta}{2}\right] + \sigma_y\left[\dfrac{1-\cos 2\theta}{2}\right] = \dfrac{\sigma_x}{2}+\dfrac{\sigma_x\cos 2\theta}{2}+\dfrac{\sigma_y}{2}-\dfrac{\sigma_y\cos 2\theta}{2}$ 
+			\item[] $$\implies \boxed{\pmb{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta}}$$
+			\item (Alt)$\tau_{ob} = \dfrac{P_y\cos\theta-P_x\sin\theta}{A_{abwx}} = \dfrac{\sigma_yA_{dcwx}\cos\theta}{A_{abwx}}-\dfrac{\sigma_xA_{abcd}\sin\theta}{A_{abwx}} = \sigma_y\sin\theta\cos\theta - \sigma_x\sin\theta\cos\theta$ (Using (1) \& (2))
+			\item[] $$\implies \boxed{\tau_{ob} = (\sigma_x-\sigma_y)\sin\theta\cos\theta = \pmb{\left(\dfrac{\sigma_x-\sigma_x}{2}\right)\sin 2\theta}}$$
+		\end{itemize}
+%-----------------------------------------------------------------------------------------%
+	\subsection{Member subjected to Pure shear stresses}
+		\begin{itemize}
+			\item
+		\end{itemize}
+%-----------------------------------------------------------------------------------------%
+	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
+		\begin{itemize}
+			\item
+		\end{itemize}
 %-----------------------------------------------------------------------------------------%
 \end{document}
 %-----------------------------------------------------------------------------------------%
