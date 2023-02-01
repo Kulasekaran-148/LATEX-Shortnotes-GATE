@@ -1058,12 +1058,16 @@
 		\end{itemize}
 	\subsection{Beam of constant width}
 		\begin{itemize}
-			\item
+			\item Consider a Simply supported beam AB with cross section (b*d). Section Modulus (Z) of the beam is : $\dfrac{bd^2}{6}$
+			\item But for Uniform strength, lets consider that the beam has \textbf{constant width and varying depth} along its length. $\implies Z=\dfrac{bd_x^2}{6} \impliedby (d_x$ = depth of the beam at a distance x from support A). $M_{R_x} = \sigma\dfrac{bd_x^2}{6}$
+			\item Just like how we calculate the moment at a distance x ($M_x$) in BMD, $M_x$ will be $\dfrac{Wx}{2}$ for a point load W acting at the center of the beam
+			\item $(M_{R_x} = M_x) \implies \sigma\dfrac{bd_x^2}{6} = \dfrac{Wx}{2} \implies \boxed{d_x = \sqrt{\dfrac{3W}{b\sigma}}\sqrt{x}} \impliedby$ (Parabolic)
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Beam of constant depth}
 		\begin{itemize}
-			\item 
+			\item Similarly let's consider instead of depth, the width is varying. So, $(M_{R_x} = M_x) \implies \sigma\dfrac{b_xd^2}{6} = \dfrac{Wx}{2}$
+			\item[$\implies$] $\boxed{b_x = \dfrac{3Wx}{\sigma d^2}}\impliedby$ (Linear)
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Biaxial Bending}
@@ -1074,7 +1078,68 @@
 \chapter{Shear stresses in Beams}
 	\section{Shear stress distribution in Beams}
 		\begin{itemize}
-			\item 
+			\item \textbf{Assumptions:}
+				\begin{itemize}
+					\item Material is Homogeneous, elastic
+					\item Obeys Hooke's Law
+					\item Shear stress($\tau$) is assumed constant along width and variation along depth
+				\end{itemize}
+			\item $\boxed{\tau = \dfrac{SA\bar{y}}{Ib}}$
+			\item S = Shear force at any section
+			\item A$\bar{y}$ = Area MOI of section above y about NA
+			\item $\bar{y}$ = Distance from centroid of area above y to NA
+			\item I = Area MOI of the whole section about NA
+			\item b = Width of the section at a distance y from NA
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
+	\section{Shear Stress distribution}
+	\textsc{Steps to find the Shear stress distribution for any cross section}
+		\begin{itemize}
+			\item Find the terms in the formula $\boxed{\dfrac{SA\bar{y}}{Ib}}$ for the given cross sectionf
+			\item Equate $\dfrac{d\tau}{dy}=0$ to find the value of y for which $\tau$ is max.
+			\item Then see if $\tau_{max}$ can be equated to $\tau_{avg}$ which is $\dfrac{S}{Area\;of\;whole\;section}$
+			\item Equate $\tau$ with $\tau_{avg}$ to find the value of y where $\tau_{avg}$ occurs				
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear stress distribution in Rectangular section}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{shearstressdistribution_rectangle.png}
+		\end{figure}
+		\begin{itemize}
+			\item We know, $\boxed{\tau = \dfrac{SA\bar{y}}{Ib}}$
+			\item Here, Area of ABEF (A) = $b\left(\dfrac{d}{2}-y\right)$
+			\item $\bar{y} = y + \dfrac{(\dfrac{d}{2}-y)}{2} = \dfrac{2y + \dfrac{d}{2} -y}{2} = \dfrac{4y+2-2y}{4} = \dfrac{2y+d}{4} = \dfrac{2(y+\dfrac{d}{2})}{2*2} \implies \boxed{\bar{y}=\dfrac{\left(y+\dfrac{d}{2}\right)}{2}}$
+			\item Area MOI of whole section about NA (I) = $\dfrac{bd^3}{12}$
+			\item[$\implies$] $\tau = \dfrac{S*\left(b\left(\dfrac{d}{2}-y\right)\right)\left(\dfrac{d}{2}+y\right)}{2\left(\dfrac{bd^3}{12}\right)b} \implies \boxed{\tau = \dfrac{6S}{bd^3}\left(\dfrac{d^2}{4}-y^2\right)} \impliedby$ (Parabolic variation)
+			\item From the above result, we can infer that $\tau = 0$ when y = $\pm\dfrac{d}{2}$ and for $\tau_{max},\;\;\dfrac{d\tau}{dy} = 0$
+			\item $\dfrac{d\tau}{dy} = 0 \implies \dfrac{d}{dy}\left[\dfrac{6S}{bd^3}\left(\dfrac{d^2}{4}-y^2\right)\right] = 0 \implies \dfrac{-12Sy}{bd^3} = 0 \implies \boxed{\tau_{max}\;at\;(y=0)}$
+			\item $\implies \boxed{\tau_{max} = \dfrac{3S}{2bd}} \impliedby$ (Here, $\dfrac{S}{bd} = \dfrac{S}{A} = \tau_{avg}) \implies \boxed{\tau_{max} = \dfrac{3}{2}\tau_{avg}}$
+			\item Now, to find the distance at which $\tau_{avg}$ occurs, let $\tau = \tau_{avg}$
+			\item[$\implies$] $\dfrac{6S}{bd^3}\left(\dfrac{d^2}{4}-y^2\right) = \dfrac{S}{bd}\;\;\;$ Solving this, will give $\boxed{y = \pm\dfrac{d}{2\sqrt{3}}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Shear Stress distribution in Triangular section}
+		\begin{itemize}
+			\item $\boxed{\tau_{max} = \dfrac{3S}{bh}}\;\;\;\boxed{\tau_{max} = \dfrac{3}{2}\tau_{avg}}$
+			\item Shear stress at centroid is $\dfrac{4}{3}$ times the Avg Shear stress
+			\item $\tau_{max}$ occurs at h/2. but NA is at h/3. So unlike the rectangular section for which the max shear occurs at NA, triangular section is different. 
+			\item $\tau_{avg}$ occurs at ???
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Shear Stress distribution in Circular section}
+		\begin{itemize}
+			\item $\boxed{\tau_{max} = \dfrac{4S}{3\pi R^2}}\;\;\;\boxed{\tau_{max} = \dfrac{4}{3}\tau_{avg}}$
+			\item Shear stress at centroid is $\dfrac{4}{3}$ times the Avg Shear stress
+			\item $\tau_{max}$ occurs at NA
+			\item $\tau_{avg}$ occurs at $\pm\dfrac{R}{2}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Shear Stress distribution in I-section}
+		\subsubsection{Shear stress distribution in Flange}
+		\subsubsection{Shear stress distribution in Web}
+%-----------------------------------------------------------------------------------------%
 \end{document}
+%-----------------------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------------------%
