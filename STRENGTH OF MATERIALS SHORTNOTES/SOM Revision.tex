@@ -1231,14 +1231,14 @@
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction}
+		\begin{figure}[H]
+				\hspace{-0.7cm}
+				\includegraphics[scale=0.45]{case2a.png}
+		\end{figure}
 		\begin{itemize}
-			\begin{figure}[H]
-				\centering
-				\includegraphics[scale=0.5]{case2.png}
-			\end{figure}
-			\item From Diagram(2) above, $\boxed{\sin\theta = \dfrac{A_{dcwx}}{A_{abwx}}}_{(1)}\;\;\;\boxed{\cos\theta = \dfrac{A_{abcd}}{A_{abwx}}}_{(2)}$	
+			\item From Diagram(5) above, $\boxed{\sin\theta = \dfrac{A_{dcwx}}{A_{abwx}}}_{(1)}\;\;\;\boxed{\cos\theta = \dfrac{A_{abcd}}{A_{abwx}}}_{(2)}$	
 			\item $\boxed{\sigma_x=\dfrac{P_x}{A_{abcd}}}_{(3)}\;\;\;\boxed{\sigma_y = \dfrac{P_y}{A_{cdwx}}}_{(4)}\;\;\;\boxed{\tau=\dfrac{P_y}{A_{abcd}}}_{(5)}\implies\boxed{P_x=\sigma_x A_{abcd}}_{(6)}\;\;\;\boxed{P_y=\sigma_y A_{dcwx}}_{(7)}$
-			\item From Diagram(3):
+			\item From Diagram(2):
 			\begin{itemize}
 				\item Resolving $P_x$ into $P_{nx}$ and $P_{tx} \implies \boxed{P_{nx} = P_xSin(90-\theta) = P_xCos\theta}\;\;\;\boxed{P_{tx} = P_xCos(90-\theta) = P_xSin\theta}$
 				\item Resolving $P_y$ into $P_{ny}$ and $P_{ty} \implies \boxed{P_{ny} = P_yCos(90-\theta) = P_ySin\theta}\;\;\;\boxed{P_{ty} = P_ySin(90-\theta) = P_yCos\theta}$
@@ -1249,18 +1249,26 @@
 			\item[$\implies$] (Using (1) \& (2)) $\sigma_x\cos^2\theta + \sigma_y\sin^2\theta = \sigma_x\left[\dfrac{1+\cos 2\theta}{2}\right] + \sigma_y\left[\dfrac{1-\cos 2\theta}{2}\right] = \dfrac{\sigma_x}{2}+\dfrac{\sigma_x\cos 2\theta}{2}+\dfrac{\sigma_y}{2}-\dfrac{\sigma_y\cos 2\theta}{2}$ 
 			\item[] $$\implies \boxed{\pmb{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta}}$$
 			\item (Alt)$\tau_{ob} = \dfrac{P_y\cos\theta-P_x\sin\theta}{A_{abwx}} = \dfrac{\sigma_yA_{dcwx}\cos\theta}{A_{abwx}}-\dfrac{\sigma_xA_{abcd}\sin\theta}{A_{abwx}} = \sigma_y\sin\theta\cos\theta - \sigma_x\sin\theta\cos\theta$ (Using (1) \& (2))
-			\item[] $$\implies \boxed{\tau_{ob} = (\sigma_x-\sigma_y)\sin\theta\cos\theta = \pmb{\left(\dfrac{\sigma_x-\sigma_x}{2}\right)\sin 2\theta}}$$
+			\item[] $$\implies \boxed{\tau_{ob} = (\sigma_x-\sigma_y)\sin\theta\cos\theta = \pmb{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta}\implies \boxed{\tau_{max} = \left(\dfrac{\sigma_x-\sigma_y}{2}\right)}\;(\sin 2\theta\;is\;max\;at\;\theta=45,135)}$$
+			\item $\tau_{max}$ will occur on a plane which is inclined at an angle 45\textdegree to the principal planes
+			\item Normal stresses on the plane of $\tau_{max}$ are equal and alike. 
+			\item Resultant stress on the plane of $\tau_{max}$ is $\sigma_r = \sqrt{\sigma_{ob}^2+\tau_{max}^2} = \sqrt{\left(\dfrac{\sigma_x+\sigma_y}{2}\right)^2+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2} = \sqrt{\dfrac{\sigma_x^2+\sigma_y^2}{2}}$
+			\item \textbf{Angle of obliquity($\beta$)} : The angle between $\sigma_{ob}$ and $\sigma_r \implies \boxed{\tan\beta=\dfrac{\tau_{max}}{\sigma_{ob}} = \dfrac{\sigma_x-\sigma_y}{\sigma_x+\sigma_y}}$
 		\end{itemize}
 %-----------------------------------------------------------------------------------------%
 	\subsection{Member subjected to Pure shear stresses}
 		\begin{itemize}
-			\item
-		\end{itemize}
+			\item $\boxed{\sigma_{ob} = \tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = \tau_{xy}\cos 2\theta}$
+			\item To find Principal planes, equate $\tau_{ob}=0 \implies \theta=45,135$
+			\item Principal stresses, $\boxed{\sigma_1,\sigma_2 = +\tau_{xy},-\tau_{xy}}$
+		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
 		\begin{itemize}
-			\item
-		\end{itemize}
+			\item $\boxed{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm \left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta+\tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = -\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta+\tau_{xy}\cos 2\theta}$
+			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{\tau_{xy}}{\sigma_x-\sigma_y}}$
+			\item Principal stresses: $\boxed{\sigma_1,\sigma_2 = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}}$
+		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \end{document}
 %-----------------------------------------------------------------------------------------%
