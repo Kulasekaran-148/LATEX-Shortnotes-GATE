@@ -986,5 +986,95 @@
 			\item We know, $Stress=\dfrac{Force}{Area}$. So, Force = Stress * Area
 			\item So, $dF = \sigma dA = \dfrac{\sigma_{max}}{y_{max}}ydA \implies$ $F = \dfrac{\sigma_{max}}{y_{max}}\int ydA = \boxed{\dfrac{\sigma_{max}}{y_{max}}A\bar{y}}$
 		\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%			
+%-----------------------------------------------------------------------------------------%
+	\section{Bending stress distribution in Composite Beam}
+		\begin{itemize}
+			\item If the materials are joined firmly with each other, there will be a common NA
+			\item If they are not joined together, then both beam will bend independently about their own NA. Eg. Leaf springs. The Total $M_R$ is this case will be the sum of the two. 
+			\item In case of composite beams, the position of NA will not be the centroid of the section as they are made of different materials and hence don't satisfy the condition of pure bending
+			\item The composite section can be converted into an equivalent section made of either of the two materials. For that equivalent section, the centroid will coincide with the NA
+			\item In composite beams, the bending strain diagram is linear, hence strain in the two materials at a given distance from NA will be the same $\impliedby$ \textbf{Strain compatibility condition}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Equivalent section}
+		\begin{itemize}
+			\item \textbf{Modular ratio(m):} = $\dfrac{E_1}{E_2}$
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{equisection.png}
+			\end{figure}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Flitched Beam}
+		\begin{itemize}
+			\item Wooden section strengthened by metal plate either provided at top-and-bottom or at left-and-right symmetrically
+			\item Flitched beams are provided when a homogeneous beam of wood will require large cross-sectional area for same moemnt of resistance. 
+			\item Generally top-and-bottom flitched beam is 3-5 times stronger than side flitched beam
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Finding $M_R$ of Top and Bottom Flitched beam using Strain compatibility method}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{flitchedbeam.png}
+		\end{figure}
+		\begin{itemize}
+			\item For composite beams, by strain compatibility condition: \fbox{Strain in steel = Strain in Wood} $\implies \in_s = \in_w$ 
+			\item $\implies \dfrac{\sigma_s}{E_s} = \dfrac{\sigma_w}{E_w} \implies \dfrac{\sigma_s}{\sigma_w} = \dfrac{E_s}{E_w} = m$
+			\item[$\implies$] At the same distance from NA, if $\sigma_s$ is the bending stress in steel, then $\sigma_w$ at that level will be $\sigma_s/m$
+			\item Let permissible stress in wood be $\sigma_w$. Then Total $M_R = M_{R_W} + M_{R_S}$
+			\item $M_{R_W} = \sigma_WZ = \sigma_W\left(\dfrac{I}{y_{max}}\right) \implies \sigma_w\left(\dfrac{bd^3/12}{d/2}\right) =  \sigma_W\dfrac{bd^2}{6}$
+			\item $M_{R_S} = M_R$ of Steel of size(b*(d+2t)) - $M_R$ of Steel of size(b*d)
+			\item $M_{R_S} = \sigma_{S_{max}}\left(\dfrac{b(d+2t)^3/12}{d/2 + t}\right) - \sigma_S\left(\dfrac{bd^2}{6}\right)$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Finding $M_R$ of Top and Bottom Flitched beam using Equivalent section method}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{flitchedbeam_MR.png}
+		\end{figure}
+		\subsubsection{$M_R$ for Equivalent Wood section}
+			\begin{align*}
+				M_{R} &= \sigma_W\left(\dfrac{I}{y_{max}}\right)\\
+				&= \sigma_W.......
+			\end{align*}
+			\begin{itemize}
+				\item $M_R$ (In terms of wood) = $\boxed{\sigma_W\left[\dfrac{mb(d+2t)^2}{6}-\dfrac{(mb-b)d^2}{6}\right]}$
+				\item $M_R$ (In terms of steel) = $\boxed{\sigma_s\left[\dfrac{b(d+2t)^2}{6}-\dfrac{b-\dfrac{b}{m}d^2}{6}\right]}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Side Flitched Beam}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{sideflitchedbeam.png}
+		\end{figure}
+		\begin{itemize}
+			\item $\boxed{M_{R_W} = \sigma_W\left(\dfrac{bd^2}{6}\right)}\;\;\;\boxed{M_{R_S} = \sigma_S\left(\dfrac{2td^2}{6}\right)}$
+			\item[$\implies$] $\boxed{M_R  = (M_{R_W} + M_{R_S}) = \sigma_W\dfrac{d^2}{6}[b+m2t] = \sigma_S\dfrac{d^2}{6}[\dfrac{b}{m} + 2t]}$			
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Beam of Uniform Strength}
+		\begin{itemize}
+			\item For an economical design, the section of the beam may be reduced towards the support, as bending moment decreases towards the support.
+		\end{itemize}
+	\subsection{Beam of constant width}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Beam of constant depth}
+		\begin{itemize}
+			\item 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Biaxial Bending}
+		\begin{itemize}
+			\item 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\chapter{Shear stresses in Beams}
+	\section{Shear stress distribution in Beams}
+		\begin{itemize}
+			\item 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 \end{document}
