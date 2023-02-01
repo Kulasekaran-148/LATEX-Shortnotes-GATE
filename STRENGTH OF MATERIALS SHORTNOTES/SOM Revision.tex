@@ -1266,9 +1266,149 @@
 	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
 		\begin{itemize}
 			\item $\boxed{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm \left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta+\tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = -\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta+\tau_{xy}\cos 2\theta}$
-			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{\tau_{xy}}{\sigma_x-\sigma_y}}$
+			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{2\tau_{xy}}{\sigma_x-\sigma_y}}$
 			\item Principal stresses: $\boxed{\sigma_1,\sigma_2 = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}}$
 		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Graphical Method - Mohr's circle}
+		\subsection{Construction of Mohr's circle}
+			\begin{itemize}
+				\item Horizontal axis represents Normal stress and Vertical axis represents shear stress
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Properties of Mohr's circle}
+			\begin{itemize}
+				\item Center of Mohr's circle always lies on x-axis $\implies$ Mohr's circle is always symmetrical about $\sigma$-axis
+				\item Radius of Mohr circle = Max Shear stress ($\tau_{max}$)
+				\item The center coordinate of Mohr circle represent the Normal stress on the plane of $\tau_{max}$
+				\item The circle cuts the $\sigma$-axis at two points. Those points represent the Principal stresses
+				\item If two point on the circumference of Mohr's circle subtend an angle $2\theta$ wrt to center, then the angle between those planes will be $\theta$
+				\item Mohr's circle will be symmetrical about both the axis if stress element is subjected to equal and unlike normal stresses
+				\item \textbf{Special case: Pure shear} 
+				\begin{itemize}
+					\item[$\implies$] Center of Mohr's circle will be (0,0) $\implies$ Mohr's circle will be symmetrical about both the axis
+					\item[$\implies$] Radius of Mohr's circle = $\tau \implies \tau_{max} = \tau$
+					\item[$\implies$] Sum of principal stresses will be zero
+				\end{itemize}
+				\item \textbf{Special case: Hydrostatic stress}
+					\begin{itemize}
+						\item Hydrostatic stresses: Equal and alike stresses in mutually perpendicular directions without any shear
+						\item Mohr's circle will reduce to a point
+					\end{itemize}
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Analysis of Strain}
+	\subsection{Strain analysis of element subjected to Bi-axial stress in Mutually perpendicular direction}
+		\begin{itemize}
+			\item Consider an element being subjected to Bi-axial stress($\sigma_x\;\&\;\sigma_y$) in two mutually perpendicular directions
+			\item Since, there is no shear, $\sigma_x=\sigma_1$ and $\sigma_y=\sigma_2$ will be the principal stresses
+			\item Principal strains: $\boxed{\in_1=\dfrac{\sigma_1}{E}-\mu\dfrac{\sigma_2}{E}}\;\;\;\boxed{\dfrac{\sigma_2}{E}-\mu\dfrac{\sigma_1}{E}}$ 
+			\item Principal stresses: $\boxed{\sigma_1 = \dfrac{E}{1-\mu^2}(\in_1+\mu\in_2)}\;\;\;\boxed{\sigma_2 = \dfrac{E}{1-\mu^2}(\in_2+\mu\in1)}$
+			\item If principal strains are known in principal directions, then principal stresses can be calculated
+			\item Now for any direction $\theta$, the normal and transverse strain \& shear strain in that plane can be easily calculated:
+			\item $\boxed{\in_{ob} = \left(\dfrac{\in_1+\in_2}{2}\right)\pm\left(\dfrac{\in_1-\in_2}{2}\right)\cos 2\theta}\;\;\;\boxed{\dfrac{\phi_{ob}}{2}=-\dfrac{\in_1-\in_2}{2}\sin 2\theta}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Strain analysis of element subjected to Bi-axial stress in mutually perpendicular direction as well as shear stress}
+		\begin{itemize}
+			\item $\boxed{\in{ob} = \left(\dfrac{\in_x+\in_y}{2}\right)\pm \left(\dfrac{\in_x-\in_y}{2}\right)\cos 2\theta+\dfrac{\phi_{xy}}{2}\sin 2\theta}\;\;\;\boxed{\dfrac{\phi_{ob}}{2} = -\left(\dfrac{\in_x-\in_y}{2}\right)\sin 2\theta+\dfrac{\phi_{xy}}{2}\cos 2\theta}$
+			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{\phi_{xy}}{\in_x-\in_y}}$
+			\item Principal stresses: $\boxed{\in_1,\in_2 = \left(\dfrac{\in_x+\in_y}{2}\right)\pm\sqrt{\left(\dfrac{\in_x-\in_y}{2}\right)^2+\left(\dfrac{\tau_{xy}}{2}\right)^2}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Properties of Strain Mohr's circle}
+		\begin{itemize}
+			\item Horizontal axis : $\in$-axis \hspace{1cm} Vertical axis : $\dfrac{\phi}{2}$-axis
+			\item Diameter of Mohr's circle represents Max shear strain
+			\item The center coordinate of Mohr's circle $\left(\dfrac{\in_x+\in_y}{2}\right)$ represent normal strain in the direction of $\phi_{max}$		
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Rosettes}
+		\subsection{Rectangular rosette}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Delta $\Delta$ rosette}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Star rosette}
+		\begin{itemize}
+			\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Theories of Elastic failure}
+		\begin{itemize}
+			\item Generally there are two modes of failure:
+				\begin{enumerate}
+					\item Yielding or Ductile failure
+					\item Fracture or Brittle failure
+				\end{enumerate}
+		\end{itemize}
+		\subsection{Maximum Principal Stress theory - Rankine's Theory}
+			\begin{itemize}
+				\item Suitable for Brittle materials
+				\item Material will fail if Max.Principal stress($\sigma_1$) = $\sigma_y$ in Tension
+				\item Material will fail if Min.Principal stress($\sigma_3$) = $\sigma_y$ in Compression
+				\item For no failure, $\sigma_1\le\sigma_y$ and For design, $\sigma_1\le\dfrac{\sigma_y}{FOS}$		
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Maximum Principal strain theory - St.Venant's Theory}
+			\begin{itemize}
+				\item \textbf{Applicability and Limitations:}
+				\item applicable for both ductile and brittle materials, but results are not accurate in both the cases
+				\item In case of pure shear, results are still unsafe but better than Rankine's theory
+				\item Material will fail if Max.Principal strain($\in_1$)=$\in_y$ under Uni-axial loading where $\boxed{\in_1=\dfrac{\sigma_1}{E}-\dfrac{\mu\sigma_2}{E}-\dfrac{\mu\sigma_3}{E}}$ and ${\in_y = \dfrac{\sigma_y}{E}}$
+				\item For no failure, $\in_1\le\in_y$ and for design $\in_1\le\left(\dfrac{\sigma_P}{E}=\dfrac{\sigma_y}{FOS*E}\right)$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Maximum Shear stress theory - Guest \& Tresca's Theory}
+			\begin{itemize}
+				\item \textbf{Applicability and Limitations:}
+				\begin{itemize}
+					\item suitable for ductile materials and for pure shear case, it is over safe
+					\item Not suitable for hydrostatic loading $\impliedby$ It says shear stress will be zero and so material will never fail, which not possible in reality.
+					\item Not applicable to brittle materials as they have different yield stress in tension and compression
+				\end{itemize}
+				\item Material will fail when Max. Shear stress($\tau_{max}$) = $\dfrac{\sigma_y}{2}$ under uniaxial loading
+				\item For no failure, $\tau_{max}\le\dfrac{\sigma_y}{2}$ and for design $\tau_{max}\le\dfrac{\sfrac{\sigma_y}{FOS}}{2}$
+				\item Max shear stress in Bi-axial loading will be $\dfrac{\sigma_1-\sigma_2}{2}$
+				\item Max shear stress in Tri-axial loading will be max$\left(\dfrac{\sigma_1-\sigma_2}{2},\dfrac{\sigma_2-\sigma_3}{2},\dfrac{\sigma_3-\sigma_1}{2}\right)$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Maximum Strain Energy theory - Haigh and Beltrami's Theory}
+									
+			\begin{itemize}
+				\item \textbf{Applicability and Limitations:}
+					\begin{itemize}
+						\item suitable for ductile materials. Not suitable for brittle materials as elastic limit stress in tension and compression are quite different
+						\item In case of pure shear, results are still unsafe for ductile materials
+					\end{itemize}
+				\item Material will fail when Max. Strain energy(u) = Strain energy developed at yield stress under Uni-axial loading $\implies \boxed{u = \dfrac{\sigma_y^2}{2E}}$
+				\item for no failure, $u\le\dfrac{\sigma_y^2}{2E}$ and for design, $u\le\dfrac{\left(\sfrac{\sigma_y}{FOS}\right)^2}{2E}$
+				\item $\boxed{u = \dfrac{1}{2E}(\sigma_1^2+\sigma_2^2-2\mu\sigma_1\sigma_2)} \impliedby$ (2D) $\;\;\;\boxed{u = \dfrac{1}{2E}\left[\sigma_1^2+\sigma_2^2+\sigma_3^2-2\mu(\sigma_1\sigma_2+\sigma_2\sigma_3+\sigma_3\sigma_1)\right]} \impliedby$ (3D)
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Distortion energy theory - Mises-Henky Theory}
+			\begin{itemize}
+				\item \textbf{Applicability and Limitations:}
+				\begin{itemize}
+					\item suitable for ductile materials. For the case of pure shear, theoretical results is same as actual results
+					\item Not applicable for brittle and not applicable under hydrostatic loading
+				\end{itemize}
+				\item Material will fail when $u_s=u_{ys} \impliedby$ Max.Shear strain energy = shear strain energy stored at yield stress in Uni-axial loading
+				\item Total strain energy(u) = Volumetric strain energy($u_v$) + Shear strain energy($u_s$)
+				\item $\boxed{u_v = \dfrac{1}{2}*\sigma_{avg}*\in_v}\;\;\;$ 
+				\item $\boxed{\sigma_{avg} = \left(\dfrac{\sigma_1+\sigma_2+\sigma_3}{3}\right)}\;\;\;\boxed{u = \dfrac{1}{2E}\left[\sigma_1^2+\sigma_2^2+\sigma_3^2-2\mu(\sigma_1\sigma_2+\sigma_2\sigma_3+\sigma_3\sigma_1)\right]} \impliedby$ (3D)
+				\item 
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Octahedral Shear stress theory}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \end{document}
 %-----------------------------------------------------------------------------------------%
