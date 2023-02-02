@@ -412,33 +412,80 @@ $\boxed{p(X=x)= (^nC_x)p^x(1-p)^{n-x}}$
 				\item $\alpha \implies$ number of occurrence of event per unit time
 				\item $\boxed{p(x=x)=\dfrac{e^{-\lambda}\lambda^x}{x!}}\;\;\;\;\;\boxed{p(x=(x+1)) = \dfrac{\lambda}{x+1}p(x)}\impliedby$ (Recurrence relation) (obtained by p(x)/p(x+1))
 				\item \textbf{NOTE: } Poisson distribution is used to approximate Binomial distribution when n is very large and p is very small for binomial distribution. So we'll use $\boxed{\pmb{\lambda = np}}$
+				\item For Poisson distribution: $E(x) = V(x) = \lambda$
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Continuous Distribution}
 		\subsection{General Continuous Distribution}
 			\begin{itemize}
-				\item
+				\item Let X be a Continuous Random Variable. A continuous distribution of X can be defined by a PDF f(x): $p(-\infty \le x \le \infty) = \int_{-\infty}^{\infty}f(x)dx=1$
+				\item We know, E(x) = $\mu_x = \int_{-\infty}^{\infty}xf(x)dx$ and V(x) = $E(x^2)-[E(x)]^2$ 
+				\item The cumulative distribution function : $F(x) = p(X\le x) = \int_{-\infty}^{x}f(x)dx$
+				\item \textbf{NOTE: } Differentiation of the cumulative distribution function (CDF) does not necessarily give the probability density function (PDF). However, if the CDF is differentiable, then it's derivative is the PDF. This is known as the \textbf{"Probability Density Function Theorem"}
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%		
-		\subsection{Uniform Distribution}
+		\subsection{Uniform Distribution($\alpha,\beta$)}
+			\begin{table}[H]
+				\centering
+				\def\arraystretch{1.5}
+				\begin{tabular}{cc}
+					\parbox{3cm}{\includegraphics[scale=0.4]{uniformdistribution.png}} & \hspace{1cm}
+					\parbox{12cm}{X is a Uniform Random Variable on the interval ($\alpha,\beta$) if its PDF:\\\\$\boxed{f(x) = \dfrac{1}{\beta-\alpha}}\impliedby$ (if $\alpha < x <\beta$) \hspace{0.5cm}$\boxed{f(x) = 0}\impliedby$ (Otherwise)\\\\\\For Discrete Uniform Distribution:\\\\\hspace{1cm}Mean = $\boxed{E(x) = \dfrac{\beta+\alpha}{2}}$ \hspace{0.5cm} Variance = $\boxed{V(x) = \dfrac{(\beta-\alpha)^2}{12}}$}
+				\end{tabular}							
+			\end{table}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Exponential Distribution ($\lambda$)}
 			\begin{itemize}
-				\item
+				\item A Continuous random variable whose PDF is given by:
+				\item $\boxed{f(x) = \lambda e^{-\lambda x}}\impliedby$ (if $x\geq 0$)\hspace{0.5cm}$\boxed{f(x) = 0}\impliedby$ (if $x < 0$)
+				\item The CDF is given by: $F(a) = p(X\le a) = \int_0^a\lambda e^{-\lambda x}dx = \left(-e^{-\lambda x}\right)_0^a = \boxed{1-e^{-\lambda a}}, a \geq 0$
+				\item In the above expression, if its for $p(a \le x \le b)$ then the CDF = F(b) - F(a)
+				\item $\boxed{Mean = E(x) = 1/\lambda}\;\;\;\boxed{Variance = V(x) = 1/\lambda^2}$
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-		\subsection{Exponential Distribution}
+		\subsection{Normal Distribution ($\mu,\sigma^2$)}
+			\begin{table}[H]
+				\centering
+				\def\arraystretch{1.5}
+				\begin{tabular}{cc}
+					\parbox{4cm}{\vspace{1cm}\includegraphics[scale=0.4]{normaldistribution.png}} & \hspace{3cm}
+					\parbox{12cm}{Its a bell shaped curve\\\\X is a Normal random variable if the PDF is given by:\\$$\boxed{f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}}e^{\left(\dfrac{-(x-\mu)^2}{2\sigma^2}\right)}}\impliedby (-\infty < x < \infty)$$\\$$\boxed{E(x) = \mu}\;\;\boxed{V(x) = \sigma^2}$$}
+				\end{tabular}
+			\end{table}
 			\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-		\subsection{Normal Distribution}
-			\begin{itemize}
-				\item
+				\item Approximate areas: $\boxed{A_x(\mu-\sigma,\mu+\sigma) = 0.68A}\;\;\boxed{A_x(\mu-2\sigma,\mu+2\sigma)=0.95A}\;\;\boxed{A_x(\mu-3\sigma,\mu+3\sigma)=0.977A}$
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 		\subsection{Standard Normal Distribution}
 			\begin{itemize}
-				\item
+				\item Since in the Normal distribution, the N($\mu,\sigma^2$) varies with $\mu$ and $\sigma^2$, the integral can be evaluated only numerically
+				\item So, its converted to Standard normal distribution N(0,1) for which, the shape, hence the integral remains constant. 
+				\item The conversion of N($\mu,\sigma^2$) to N(0,1) is effected by: $\boxed{Z = \dfrac{X-\mu}{\sigma}}\impliedby$ (Z = Standard normal variate)
+				\item Mean E(x) = 0, Variance V(x) = 1
 			\end{itemize}\hrulefill
+		\subsection{Correlation}
+			\begin{itemize}
+				\item If there are two variables x and y, such that change in x changes y, then the two variables are said to in correlation. 
+				\item If the ratio of two variables is always constant no matter the change, then they are said to be perfect
+				\item The correlation is represented using \textbf{Scatter or dot diagram}
+				\item Coefficient of Correlation (r) = $\boxed{\dfrac{Cov(x,y)}{(\sigma_x)*(\sigma_y)} = \dfrac{\sum xy}{\sqrt{(\sum x^2)(\sum y^2)}}}\impliedby$ ($-1\le r \le 1$)
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale=0.4]{correlation.png}
+				\end{figure}
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Regression}
+		\begin{itemize}
+			\item Regression analysis is the method for estimating the unknown values of one variable corresponding to the known value of another variable
+			\item It can be a curve of regression or a line of regression
+			\item A line of regression is the straight line which gives the best fit in the least square sense to the given frequency
+			\item Let line of regression: y = a +bx ...(Eqn(1))
+			\item Since it is the line of best fit, the value of a and b are given by: $\sum y = na +b\sum x$
+			\item n = number of pairs of (x,y) $\implies \dfrac{\sum}{n} = a + b\dfrac{\sum x}{n}\implies \boxed{\bar{y} = a+b\bar{x}}_{Eqn(2)}\impliedby$ ($\bar{x},\bar{y}$ are means of x and y respectively)
+			\item The line of regression passes through ($\bar{x},\bar{y}$)
+			\item Eqn(1)-Eqn(2) = $y-\bar{y} = b(x-\bar{x})$  
+		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \chapter{Numerical Methods}
 %-----------------------------------------------------------------------------------------%
