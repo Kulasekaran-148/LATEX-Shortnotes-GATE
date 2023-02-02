@@ -17,7 +17,7 @@
 %-----------------------------------------------------------------------------------------%
 \chapter{Differential Equations}
 %-----------------------------------------------------------------------------------------%
-\chapter{Probability and Statistics}
+\chapter{Probability}
 \section{Introduction and Basics}
 	\begin{itemize}
 		\item \textbf{Random Experiment} : An experiment in which the result is unpredictable, but the possibilities of the result is known. Eg. When you throw a coin, you don't know its gonna be head or tail. But you know it will be either one of them.
@@ -113,8 +113,228 @@
 		\item $\boxed{p\left(E_i/A\right) = \dfrac{p(E_i\cap A)}{A} = \dfrac{p(E_i)*p(E_i/A)}{\sum_{k=1}^{n}p(E_k).p(A/E_k)}} \impliedby$ \textbf{(Baye's Theorem)}
 	\end{enumerate}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Statistics}
-		\subsection{Basics and Introduction}
+\chapter{Statistics}
+		\section{Basics and Introduction}
+		\begin{itemize}
+			\item A branch of mathematics that gives us the means to work with large datasets and derive meaningful results from it
+			\item Descriptive measures:
+				\begin{itemize}
+					\item Measure of Central tendency: indicates the avg value of data
+					\item Measure of dispersion: denotes about the extent to which data items deviate from the central tendency value. In other words, "It quantifies the variation in data"
+				\end{itemize}\hrulefill
+		\end{itemize}
+%-----------------------------------------------------------------------------------------%
+		\section{Arithmetic Mean($\bar{x}$)}
+			\begin{itemize}
+				\item $\boxed{\bar{x}=\dfrac{\sum x}{n}}\impliedby$ (for raw data) $\;\;\;\boxed{\bar{x}=\dfrac{\sum (f_ix_i)}{\sum f_i}}\impliedby$ (for Grouped data)
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\section{Median}
+		\subsection{Median for Raw data}
+			\begin{itemize}
+				\item First arrange the elements in Ascending order
+				\item $\boxed{\left(\dfrac{n+1}{2}\right)^{th}term}\impliedby$ (n=odd) $\;\;\;\boxed{\dfrac{\left(\dfrac{n}{2}\right)^{th}term+\left(\dfrac{n}{2}+1\right)^{th}term}{2}}\impliedby$ (n=even)
+			\end{itemize}\hrulefill\\\\
+%-----------------------------------------------------------------------------------------%
+		\subsection{Median for Grouped data}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{cc}
+				\parbox{8cm}{Median = $\boxed{L + \left[\dfrac{\left(\dfrac{N+1}{2}\right)-(F+1)}{f_m}\right]*h}$} & \hspace{-1cm}
+				\parbox{9cm}{L = Lower limit of median class\\\\N = Total number of data items = $\sum F$\\\\ F = cumulative frequency of the class immediately preceding the median class\\\\$f_m$ = Frequency of the median class\\\\h = width off the median class}
+			\end{tabular}
+		\end{table}\hrulefill
+		\begin{itemize}
+			\item Consider the following example for calculation of Median in grouped data:
+			\begin{table}[H]
+				\centering
+				\def\arraystretch{1.5}
+				\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{Mark Range} & \textbf{f (No. of students)} & \textbf{Cumulative frequency}\\
+				\hline
+				(00-20) & 02 & 02\\
+				\hline
+				(21-40) & 03	& 05\\
+				\hline
+				(41-60) & 10	& 15\\
+				\hline
+				(61-80) & 15	& 30\\
+				\hline
+				(81-100) & 20	& 50\\		
+				\hline	
+				\end{tabular}							
+			\end{table}
+			\item In the above example, $\left(\dfrac{N+1}{2}\right)$ = $\dfrac{(2+3+10+15+20)+1}{2} = 25.5$
+			\item Class (61-80) is the median class as $30 > 25.5$
+			\item Here, \fbox{L=61} \fbox{h=20} \fbox{F=15} $\boxed{f_m=15}$\hspace{1cm}So, Median = $60 + \dfrac{25.5-(15+1)}{15} * 20$ = 69.66 $\approx$ 69.7
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Mode}
+		\begin{itemize}
+			\item Mode is the value that occurs most frequently in the data. If more than one data is occuring most frequently, then both of them are mode.
+		\end{itemize}
+		\subsection{Mode of Raw data}
+			\begin{itemize}
+				\item Found using observation
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Mode of Grouped data}
+			\begin{table}[H]
+				\centering
+				\def\arraystretch{1.5}
+				\begin{tabular}{cc}
+					\parbox{4cm}{$\boxed{Mode = L+\dfrac{f_0-f_1}{2f_0-f_1-f_2}*h}$} & \hspace{1cm}
+					\parbox{10cm}{L = Lower limit of the modal class\\$f_0$ = Modal frequency i.e. Largest frequency\\$f_1$=Frequency in the class preceding the modal class\\$f_2$ = Frequency in the class succeeding the modal class\\h = width of the class}
+				\end{tabular}
+			\end{table}
+			\begin{itemize}
+				\item Consider the following example for calculation of Mode in grouped data:
+			\end{itemize}
+			\begin{table}[H]
+				\centering
+				\def\arraystretch{1.5}
+				\begin{tabular}{|c|c|}
+					\hline
+					\textbf{Height(in ft)} & \textbf{Number of students}\\
+					\hline
+					3.0 - 3.5 & 12\\
+					\hline
+					3.6 - 4.0 & 37\\
+					\hline
+					4.1 - 4.5 & 79\\
+					\hline
+					4.6 - 5.0 & 152\\
+					\hline
+					5.1 - 5.5 & 65\\
+					\hline
+					5.6 - 6.0 & 7\\
+					\hline
+					\textbf{Total} & 352\\
+					\hline
+				\end{tabular}
+			\end{table}
+			\begin{itemize}
+				\item Since, 152 is the largest frequency, the modal class is (4.6 - 5.0)
+				\item Thus, \fbox{L=4.6} $\boxed{f_0 = 152}$ $\boxed{f_1 = 79}$ $\boxed{f_2 = 65}$ \fbox{h = 0.5}\hspace{1cm} Mode = $4.5 * \dfrac{152 - 79}{2(152) - 79 - 65}*0.5 \approx 4.73$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Properties relating Mean, Median and Mode}
+		\begin{itemize}
+			\item When an approx value of mode is required: $\boxed{Emprical\;mode = 3*(Median)-2*(Mean)}$
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{MeanMedianModeRelation.png}
+			\end{figure}
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Standard Deviation and Variance}
+	\subsection{Standard Deviation for RAW data}
+		\begin{itemize}
+			\item It is a measure of variation among the data
+			\item Consider there are five values: $x_1,x_2,x_3,x_4,x_5$ The mean $\bar{x} = \dfrac{x_1+x_2+x_3+x_4+x_5}{5}$.
+			\item The individual deviations are ($x_1-\bar{x}),\;(x_2-\bar{x}),\;(x_3-\bar{x}),\;(x_4-\bar{x}),\;(x_5-\bar{x})$
+			\item \textbf{Variance($\sigma^2$)} = Mean of Square of each deviation of data = $\boxed{\sigma^2 = \dfrac{\sum _{i=1}^n(x_i-\bar{x})^2}{n}}$
+			\item \textbf{Standard deviation($\sigma$)} = $\boxed{\sqrt{Variance} = +\sqrt{\dfrac{\sum _{i=1}^n(x_i-\bar{x})^2}{n}}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Standard Deviation for Grouped data}
+		\begin{itemize}
+			\item $\boxed{Arithmetic\;Mean(\bar{x})=\dfrac{\sum (f_ix_i)}{\sum f_i}}\;\;\;\boxed{Variance(\sigma^2) =\sum _{i=1}^{n}\left(\dfrac{f_i(x_i - \bar{x})^2}{f_i}\right)}$ 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Coefficient of Variation}
+		\begin{itemize}
+			\item The standard deviation is an absolute measure of variation and hence cannot be used for comparison of variation between 2 different data sets with different mean.
+			\item For the above purpose a relative measure of variation called, \textbf{Coefficient of Variation(CV)} is used. $\boxed{CV =\dfrac{\sigma}{\bar{x}}}$. CV is often represented as a percentage
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Probability Distribution}
+		\subsection{Random Variable}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Discrete Random Variable}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Continuous Random Variable}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Probability Density Function}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Probability Mass Function}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Distributions}
+		\begin{itemize}
+				\item
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Properties of Discrete Distribution}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Properties of Continuous Distribution}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Binomial Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Hypergeometric Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Geometric Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Poisson Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{General Continuous Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Uniform Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Exponential Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Normal Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Standard Normal Distribution}
+		\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 %-----------------------------------------------------------------------------------------%
 \chapter{Numerical Methods}
 %-----------------------------------------------------------------------------------------%
