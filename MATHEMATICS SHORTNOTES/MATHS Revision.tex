@@ -252,89 +252,193 @@
 	\section{Probability Distribution}
 		\subsection{Random Variable}
 			\begin{itemize}
-				\item
+				\item It is a real valued function. 
+				\item For eg. Tossing 3 coins. x be the real valued function denoting the number of heads. 
+				\begin{table}[H]
+					\centering 
+					\def\arraystretch{1.5}
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						x & 0 & 1 & 2 & 3\\
+						\hline
+						p(x) & 1/8 & 3/8 & 3/8 & 1/8\\
+						\hline 
+					\end{tabular}	
+				\end{table}
+				\item It is of two types: Discrete and Continuous
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 		\subsection{Discrete Random Variable}
 			\begin{itemize}
-				\item
+				\item eg. x = function representing the possible sum of values of two fair dice. 
+				\item x can have only discrete values of any one of \{2,3,4,5,6,7,8,9,10,11,12\}
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 		\subsection{Continuous Random Variable}
 			\begin{itemize}
-				\item
+				\item eg. x = function representing the volume of a water in a container
+				\item In this case, x can have any value between 0 to the volume.
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-		\subsection{Probability Density Function}
+		\subsection{Probability Density Function(F(x))}
 			\begin{itemize}
-				\item
+				\item $\boxed{F(x) \geq 0}\;\;\;\boxed{\int_{-\infty}^\infty F(x)dx= 1}\;\;\;\boxed{p(a<x<b)=\int_a^bF(x)dx}$
+				\item In simple terms, it tells us the likelihood of a continuous random variable having a value between any two points, rather than having a specific value as in the case of a discrete random variable. 
+				\item The pdf assigns a value between 0 and 1 to every possible value of the continuous random variable, such that the integral of the pdf over the entire range of the random variable is equal to 1. 
+				\item This means that the area under the curve of the pdf represents the total probability of the random variable being in that range of values.
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-		\subsection{Probability Mass Function}
+		\subsection{Probability Mass Function(p(x))}
 			\begin{itemize}
-				\item
+				\item $\boxed{p(x) = P[X=x]}\;\;\;\boxed{p(x)\geq 0}\;\;\;\boxed{\sum p(x)=1}$
+				\item In simple terms, it gives the exact probability of a discrete random variable having a specific value. The PMF assigns a probability between 0 and 1 to each possible value of the discrete random variable such that the sum of the probabilities for all possible values is equal to 1. 
+				\item In other words, the PMF gives the probability distribution of a discrete random variable and allows us to see the likelihood of each possible outcome.
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Distributions}
 		\begin{itemize}
-				\item
+				\item Distributions are also of two types based on the above:
+					\begin{itemize}
+						\item Discrete distribution: Poisson, Hypergeometric
+						\item Continuous distribution: Uniform, Normal and Exponential
+					\end{itemize}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 		\subsection{Properties of Discrete Distribution}
 			\begin{itemize}
-				\item
+				\item $\boxed{\sum P(x) = 1}\;\;\boxed{E(x)=\sum xp(x)}\;\;\boxed{V(x)=E(x^2)-(E(x))^2}$ (E(x) = Expected value, V(x) = Variance of RV)
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 		\subsection{Properties of Continuous Distribution}
 			\begin{itemize}
+				\item $\boxed{\int_{-\infty}^\infty f(x)dx = 1}\;\;\boxed{F(x) = CDF = \int_{-\infty}^x f(x)dx}\;\;\boxed{E(x) = \int_{-\infty}^\infty xf(x)dx}$
+				\item CDF = Cumulative Distribution Function.
+				\item CDF gives us the cumulative probability of a random variable being less than or equal to a certain value, while the PDF gives us the likelihood of a random variable taking on a specific value within a certain range.
+				\item $\boxed{p(a<x<b)=p(a\le x<b)=p(a<x\le b)=p(a\le x\le b)=\int_a^b f(x)dx}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Properties of Expectation(E(x)) and Variance(V(x))}
+			\begin{itemize}
+				\item $\boxed{E(c)=c}\;\;\boxed{V(c)=0}\;\;\boxed{E(cx)=cE(x)\implies E(-x)=-E(x)}\impliedby$ (c = constant)
+				\item $\boxed{V(cx)=c^2V(x)\implies V(-x)=(-1)^2V(x)=V(x)}\;\;\boxed{V(c_1x_1+c_2x_2)=c_1^2V(x_1)+c_2^2V(x_2)+2c_1c_2cov(x_1,x_2)}$
+				\item If ($x_1,x_2$) are independent variables, then $cov(x_1,x_2)=0$
+				\item $\boxed{V(x_1+x_2)=V(x_1-x_2)=V(x_1)+V(x_2)}$
+				\item $\boxed{E(X+Y)=E(X)+E(Y)}\impliedby$ (X,Y are two random variables)
+				\item $\boxed{E(XY)=E(x)E(Y)}\;\;\boxed{V(X+Y)=V(X)+V(Y)}\impliedby$ (X,Y are two independent Random Variables)
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Discrete Distributions}
+		\subsection{General Discrete Distribution}
+			\begin{itemize}
+				\item Let X be the number which comes on a single throw of dice. The probability distribution table is given by
+				\begin{table}[H]
+					\centering
+					\def\arraystretch{1.5}
+					\begin{tabular}{|c|c|c|c|c|c|c|}
+						\hline
+						x & 1 & 2 & 3 & 4 & 5 & 6\\
+						\hline
+						p(x) & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+						\hline 
+					\end{tabular}
+				\end{table}
+				\item For this case, p(x) for all x is same. But this will not be the case always. 
+				\item But, $\sum p(x) = 1$ always
+				\item From the above table, we can easily calculate E(x), V(x).
+				\item E(x) is the expected value of x and is similar to the average value of x after infinite trials. So E(x) is sometimes written as $\mu_x$
+				\item V(x) represents the variability of X. So it is written sometimes as $\sigma_x^2$	
+				\item $\boxed{cov(x,y)=E(xy)-E(x)E(y)}\;\;\boxed{cov(x,y)=0}\impliedby$ (If x,y are independent Random variables)											
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Binomial Distribution (n,p)}
+			\begin{itemize}
+				\item Consider a trial experiment of n independent trials
+				\item each of which will result in success with probability p or failure with probability 1-p
+				\item If X represents the number of successes that occur in the n trials, then X is the Binomial Random variable with parameters (n,p)
+				\item Conditions to be satisfied for Binomial distribution:
+					\begin{itemize}
+						\item Only 2 outcomes are possible: success or failure
+						\item The probability of outcome should remain same from trial to trial
+						\item The outcome of one trial should not affect the outcome of another. 
+					\end{itemize}
+				\item Then the probability of obtaining x successes from n trials is given by:
+$\boxed{p(X=x)= (^nC_x)p^x(1-p)^{n-x}}$
+				\item Here, $\boxed{E(X)=np}\;\;\boxed{V(x)=np(1-p)}$
+				\item By \textbf{Recurrence relation:} $\boxed{p(X=(x+1)) = \dfrac{(n-x)p}{(n+x)(1-p)}p(x)}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Hypergeometric Distribution}
+			\begin{itemize}
+				\item If probability changes from trial to trial, then one condition of the binomial distribution is violated. In such a case, Hypergeometric distribution is used. \textbf{Mainly used in case of sampling without replacement from a finite population}
+				\item For eg. Consider the situation:
+					\begin{itemize}
+						\item There are 10 markers on a table - 6 are defective(D), 4 are NonDefective(ND)
+						\item 3 are randomly taken without replacement
+						\item Find the probability of exactly one marker being defective
+					\end{itemize}
+				\item Since it is without replacement, after each draw(trial), the probability will change. 
+				\item Solution: Let X denote the num of defective marker. $\implies\boxed{p(X=x)=\dfrac{(^6C_x)(^4C_{3-x})}{^10C_3}}$
+				\item With the above formula for the above problem, we can easily now find the solution as well find other solutions like: At least one marker being defective $\implies (p(X=(x\geq 1)) = p(X=0)+p(X=1))$\\\\
+				\textsc{Generalized formula for Hypergeometric distribution:}
+				\begin{itemize}
+					\item Consider n objects of with r are of type 1 and (n-r) are of type 2. From this w objects are drawn.
+					\item[] $$\boxed{p(X=x)=\dfrac{(^rC_x)(^{n-r}C_{w-x})}{^nC_w}}\;\;\boxed{E(x)=n*\left(\dfrac{r}{n}\right)}$$
+				\end{itemize}
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Geometric Distribution (p)}
+			\begin{itemize}
+				\item \textbf{Consider an experiment to be performed until successes is obtained} 
+				\item let the probability of success be p and probability of failure be (1-p)=q
+				\item let x denote the number of times the experiment has to be repeated to obtain success
+				\item The distribution of random variable x is given by:
+				\begin{table}[H]
+					\centering
+					\def\arraystretch{1.5}
+					\begin{tabular}{|c|c|c|c|c|c|}
+						\hline
+						k & 1 & 2 & 3 & 4 & ...\\
+						\hline
+						p(k) & $q^0p$ & $q^1p$ & $q^2p$ & $q^3p$ & ....\\
+						\hline
+					\end{tabular}
+				\end{table}
+				\item $\boxed{p(k) = p(x-k) = q^{k-1}p}\;\;\boxed{E(x) = 1/p}\;\;\boxed{V(x)=\dfrac{q}{p^2}}\;\;\boxed{CD = F(k)=-1-q^k}\;\;\boxed{p(x>r)=q^r}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+		\subsection{Poisson Distribution($\lambda$)}
+			\begin{itemize}
+				\item $\pmb{\lambda}$ \textbf{= average number of occurrences of event in an observation period} $\pmb{\Delta t}\implies \boxed{\lambda = \alpha\Delta t}$ 
+				\item $\alpha \implies$ number of occurrence of event per unit time
+				\item $\boxed{p(x=x)=\dfrac{e^{-\lambda}\lambda^x}{x!}}\;\;\;\;\;\boxed{p(x=(x+1)) = \dfrac{\lambda}{x+1}p(x)}\impliedby$ (Recurrence relation) (obtained by p(x)/p(x+1))
+				\item \textbf{NOTE: } Poisson distribution is used to approximate Binomial distribution when n is very large and p is very small for binomial distribution. So we'll use $\boxed{\pmb{\lambda = np}}$
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\section{Continuous Distribution}
+		\subsection{General Continuous Distribution}
+			\begin{itemize}
+				\item
+			\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%		
+		\subsection{Uniform Distribution}
+			\begin{itemize}
 				\item
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Binomial Distribution}
-		\begin{itemize}
+		\subsection{Exponential Distribution}
+			\begin{itemize}
 				\item
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Hypergeometric Distribution}
-		\begin{itemize}
+		\subsection{Normal Distribution}
+			\begin{itemize}
 				\item
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Geometric Distribution}
-		\begin{itemize}
+		\subsection{Standard Normal Distribution}
+			\begin{itemize}
 				\item
 			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{Poisson Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{General Continuous Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{Uniform Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{Exponential Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{Normal Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\section{Standard Normal Distribution}
-		\begin{itemize}
-				\item
-			\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
 %-----------------------------------------------------------------------------------------%
 \chapter{Numerical Methods}
 %-----------------------------------------------------------------------------------------%
