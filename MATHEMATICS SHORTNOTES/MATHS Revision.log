@@ -1,0 +1,547 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.8.4)  3 FEB 2023 12:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"./MATHS Revision.tex"
+(MATHS Revision.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-07-04>
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/base\report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/base\size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks17
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3packages/xfrac\xfrac.sty
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2022-07-04 L3 programming layer (loader) 
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box53
+))
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2022-06-22 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/l3packages/xtemplate\xtemplate.sty
+Package: xtemplate 2022-06-22 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen150
+\l__xtemplate_tmp_int=\count273
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip52
+)
+Package: xfrac 2022-06-22 L3 Experimental split-level fractions
+\l__xfrac_slash_box=\box54
+\l__xfrac_tmp_box=\box55
+\l__xfrac_denominator_bot_sep_dim=\dimen151
+\l__xfrac_numerator_bot_sep_dim=\dimen152
+\l__xfrac_numerator_top_sep_dim=\dimen153
+\l__xfrac_slash_left_sep_dim=\dimen154
+\l__xfrac_slash_right_sep_dim=\dimen155
+\l__xfrac_slash_left_muskip=\muskip18
+\l__xfrac_slash_right_muskip=\muskip19
+
+Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
+(xtemplate)             line 80.
+
+) (C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen156
+\enit@toks=\toks22
+\enit@inbox=\box56
+\enit@count@id=\count274
+\enitdp@description=\count275
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/ulem\ulem.sty
+\UL@box=\box57
+\UL@hyphenbox=\box58
+\UL@skip=\skip54
+\UL@hook=\toks23
+\UL@height=\dimen157
+\UL@pe=\count276
+\UL@pixel=\dimen158
+\ULC@box=\box59
+Package: ulem 2019/11/18
+\ULdepth=\dimen159
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count277
+\float@exts=\toks24
+\float@box=\box60
+\@float@everytoks=\toks25
+\@floatcapt=\box61
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/bigints\bigints.sty
+Package: bigints 2010/02/15 Writing big integrals
+Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/tools\bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box62
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
+\ttl@plus=\dimen160
+\ttl@minus=\dimen161
+\ttl@toksa=\toks26
+\titlewidth=\dimen162
+\titlewidthlast=\dimen163
+\titlewidthfirst=\dimen164
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen165
+\calc@Bdimen=\dimen166
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count280
+\calc@Cskip=\skip59
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count281
+\l_MT_multwidth_dim=\dimen167
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen168
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen169
+\l_MT_above_intertext_sep=\dimen170
+\l_MT_below_intertext_sep=\dimen171
+\l_MT_above_shortintertext_sep=\dimen172
+\l_MT_below_shortintertext_sep=\dimen173
+\xmathstrut@box=\box63
+\xmathstrut@dim=\dimen174
+)
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen175
+\Gm@wd@mp=\dimen176
+\Gm@odd@mp=\dimen177
+\Gm@even@mp=\dimen178
+\Gm@layoutwidth=\dimen179
+\Gm@layoutheight=\dimen180
+\Gm@layouthoffset=\dimen181
+\Gm@layoutvoffset=\dimen182
+\Gm@dimlist=\toks27
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/geometry\geometry.cfg))
+
+LaTeX Warning: Unused global option(s):
+    [8pt].
+
+No file "MATHS Revision".aux.
+\openout1 = `"MATHS Revision.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen183
+\scratchbox=\box64
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen184
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks29
+) (C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(50.58878pt, 513.11745pt, 50.58878pt)
+* v-part:(T,H,B)=(50.58878pt, 693.79243pt, 50.58878pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=513.11745pt
+* \textheight=693.79243pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-58.68121pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1
+
+{C:/Users/kulas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+No file "MATHS Revision".toc.
+\tf@toc=\write3
+\openout3 = `"MATHS Revision.toc"'.
+
+[1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+[3
+
+]
+Chapter 3.
+[4
+
+]
+Chapter 4.
+[5
+
+]
+Chapter 5.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+4.
+(C:\KISHOR\SOFTWARES\BASIC_MIKTEX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+<images//Setrepresentation.png, id=24, 1052.13075pt x 213.79875pt>
+File: images//Setrepresentation.png Graphic file (type png)
+<use images//Setrepresentation.png>
+Package pdftex.def Info: images//Setrepresentation.png  used on input line 40.
+(pdftex.def)             Requested size: 420.84485pt x 85.51797pt.
+ [6
+
+ <./images//Setrepresentation.png>] [7] [8]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 144--144
+\OT1/cmr/m/n/10 F = cu-mu-la-tive fre-quency of the class im-me-di-ately
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+
+ []
+
+[9
+
+]
+Overfull \hbox (26.0461pt too wide) in paragraph at lines 187--187
+[]$[]$ 
+ []
+
+<images//MeanMedianModeRelation.png, id=46, 873.2625pt x 277.035pt>
+File: images//MeanMedianModeRelation.png Graphic file (type png)
+<use images//MeanMedianModeRelation.png>
+Package pdftex.def Info: images//MeanMedianModeRelation.png  used on input line
+ 227.
+(pdftex.def)             Requested size: 349.29881pt x 110.81203pt.
+[10] [11 <./images//MeanMedianModeRelation.png>] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 381--384
+
+ []
+
+[14]
+<images//uniformdistribution.png, id=64, 293.29575pt x 299.31825pt>
+File: images//uniformdistribution.png Graphic file (type png)
+<use images//uniformdistribution.png>
+Package pdftex.def Info: images//uniformdistribution.png  used on input line 43
+2.
+(pdftex.def)             Requested size: 117.31621pt x 119.72517pt.
+
+Overfull \hbox (31.95795pt too wide) in paragraph at lines 432--432
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+
+ []
+
+<images//normaldistribution.png, id=66, 741.972pt x 339.06676pt>
+File: images//normaldistribution.png Graphic file (type png)
+<use images//normaldistribution.png>
+Package pdftex.def Info: images//normaldistribution.png  used on input line 451
+.
+(pdftex.def)             Requested size: 296.78354pt x 135.62428pt.
+
+Overfull \hbox (182.97252pt too wide) in paragraph at lines 451--451
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+
+ []
+
+
+Overfull \hbox (54.81825pt too wide) in paragraph at lines 450--454
+ [][] 
+ []
+
+[15 <./images//uniformdistribution.png>]
+<images//correlation.png, id=71, 764.8575pt x 445.665pt>
+File: images//correlation.png Graphic file (type png)
+<use images//correlation.png>
+Package pdftex.def Info: images//correlation.png  used on input line 474.
+(pdftex.def)             Requested size: 305.93758pt x 178.26283pt.
+ [16 <./images//normaldistribution.png> <./images//correlation.png>] [17]
+Chapter 7.
+[18
+
+]
+Chapter 8.
+[19
+
+]
+Chapter 9.
+[20
+
+] (MATHS Revision.aux) ) 
+Here is how much of TeX's memory you used:
+ 4924 strings out of 478338
+ 88004 string characters out of 2842329
+ 423195 words of memory out of 3000000
+ 23279 multiletter control sequences out of 15000+600000
+ 483260 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 70i,19n,76p,448b,528s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\kulas\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\tcrm1000.pk><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/am
+sfonts/cm/cmcsc10.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsf
+onts/cm/cmex10.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfont
+s/cmextra/cmex7.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/KISHOR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/KISH
+OR/SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/KISHOR/
+SOFTWARES/BASIC_MIKTEX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "MATHS Revision.pdf" (21 pages, 358180 bytes).
+PDF statistics:
+ 154 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
