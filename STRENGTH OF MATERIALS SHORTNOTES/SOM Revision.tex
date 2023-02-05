@@ -1212,7 +1212,7 @@
 		\end{enumerate}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Analytical method to solve for Principal stresses \& Principal planes}
-	\subsection{Member subjected to Uni-axial stress}
+	\subsection{Stress analysis in Member subjected to Uni-axial stress}
 		\begin{itemize}
 			\begin{figure}[H]
 				\centering
@@ -1222,15 +1222,35 @@
 			\item But what is the normal stress acting on an oblique plane like (abwx) ?
 			\item Let the normal stress acting on the oblique plane (abwx) be $\sigma_{ob} \implies \sigma_{ob} = \dfrac{P_n}{A_{abwx}}$ 
 			\item The force $P_x$ is resolved into two components. $P_n$ is the normal force acting on the oblique plane (abwx) and $P_t$ is the tangential force acting along the oblique plane (abwx)
-			\item By resolution of $P_x$, $\boxed{P_n = P_xSin(90-\theta) = P_xCos\theta}\;\;\;\boxed{P_t = P_xCos(90-\theta) = P_xSin\theta}$
-			\item $Cos\theta = \dfrac{A_{abcd}}{A_{abwx}} \implies \boxed{A_{abwx} = \dfrac{A_{abcd}}{Cos\theta}}$
-		  \item So, The normal stress ($\sigma_{ob}$) acting on the plane (abwx) is given by: $$\boxed{\sigma_{ob} = \dfrac{P_n}{A_{abwx}} = \dfrac{P_xCos\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xCos^2\theta}{A_{abcd}} \implies \boxed{\sigma_{ob} = \sigma_{x}Cos^2\theta}}$$
+			\item By resolution of $P_x$, $\boxed{P_n = P_x\sin(90-\theta) = P_x\cos\theta}\;\;\;\boxed{P_t = P_x\cos(90-\theta) = P_x\sin\theta}$
+			\item $\cos\theta = \dfrac{A_{abcd}}{A_{abwx}} \implies \boxed{A_{abwx} = \dfrac{A_{abcd}}{Cos\theta}}$
+		  \item So, The normal stress ($\sigma_{ob}$) acting on the plane (abwx) is given by: $$\boxed{\sigma_{ob} = \dfrac{P_n}{A_{abwx}} = \dfrac{P_x\cos\theta}{\sfrac{A_{abcd}}{\cos\theta}} = \dfrac{P_x\cos^2\theta}{A_{abcd}} \implies \boxed{\sigma_{ob} = \sigma_{x}\cos^2\theta}}$$
 		  \item $\sigma_{ob}$ is max when $\theta$ is 0\textdegree , 180\textdegree ... $\impliedby$ (Because at these angles Cos is max)
-		  \item Similarly, Tangential stress ($\tau_{ob}$) acting along the plane (abwx) is given by: $$\boxed{\tau_{ob} = \dfrac{P_t}{A_{abwx}} = \dfrac{P_xSin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xSin\theta Cos\theta}{A_{abcd}} \implies \boxed{\tau_{ob} = \dfrac{\sigma_x}{2}Sin2\theta}}$$
-		  \item $\tau_{ob}$ is max when $\theta$ is 45\textdegree , 135\textdegree ... $\impliedby$ (Because at these angles Sin is max)
+		  \item[$\implies$] \fbox{\textbf{Principal stresses:} $\pm\sigma_x \implies \boxed{+\sigma_x=\sigma_1}\;\;\&\;\;\boxed{-\sigma_x=\sigma_2}$}
+		  \item Similarly, Tangential stress ($\tau_{ob}$) acting along the plane (abwx) is given by: $$\boxed{\tau_{ob} = \dfrac{P_t}{A_{abwx}} = \dfrac{P_x\sin\theta}{\sfrac{A_{abcd}}{\cos\theta}} = \dfrac{P_x\sin\theta \cos\theta}{A_{abcd}} \implies \boxed{\tau_{ob} = \dfrac{\sigma_x}{2}\sin 2\theta}}$$
+		  \item $\tau_{ob}$ is max when $\theta$ is 45\textdegree , 135\textdegree ... $\impliedby$ (Because at these angles $\sin 2\theta$ is max) $\implies\boxed{\tau_{max} = \pm\dfrac{\sigma_x}{2}}$
+		  \item Value of Normal stresses in the plane of Maximum shear stress: 
+		  \item[]  $\sigma_{ob} = \sigma_x\cos^2$(45\textdegree or 135\textdegree)$\implies \sigma_x\left(\dfrac{1}{\sqrt{2}}\right)^2$ or $\sigma_x\left(\dfrac{-1}{\sqrt{2}}\right)^2\implies \boxed{\sigma_{ob}=\dfrac{\sigma_x}{2}}$
+		  \item[$\implies$] \textbf{Magnitude of normal and shear stress is same in the plane of Max shear stress under Uni-axial loading}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction}
+	\subsection{Strain analysis of element subjected to Uni-axial stress}
+		\begin{itemize}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{case1.png}
+			\end{figure}
+			\item We know $\boxed{\sigma_{ob} = \sigma_{x}\cos^2\theta}$ and $\boxed{\tau_{ob} = \dfrac{\sigma_x}{2}\sin 2\theta}$
+			\item For principal stress: $\cos^2\theta$ should be max. So $\theta$ will can 0\textdegree , 180\textdegree . If $\theta$ is either of these two values, then $\tau_{ob}$ will be zero. $\implies$ \textbf{Shear stresses will be zero in principal planes for Uni-axial loading}
+			\item[$\implies$] \fbox{Principal stresses: $\pm\sigma_x \implies \boxed{+\sigma_x=\sigma_1}\;\;\&\;\;\boxed{-\sigma_x=\sigma_2}$}
+			\item \textbf{strain due to to the principal stress($\sigma_x,-\sigma_x$) will be the Principal strain($\in_1,\in_2$)}
+			\item \fbox{\textbf{Principal strains} $\implies \boxed{\in_1 = \dfrac{\sigma_1}{E}}$ and $\boxed{\in_2 = \dfrac{-\mu\sigma_1}{E}}$} $\impliedby$ (where $\mu$ is Poisson's ratio of the material)
+			\item Let $\in_{ob}$ be the normal strain for any plane and $\phi_{ob}$ be the shear strain for any plane. 
+			\item $\boxed{\pmb{\in_{ob}\;=\;\dfrac{\sigma_{ob}}{E}\;=\;\dfrac{\sigma_x\cos^2\theta}{E}\;=\;\in_x\cos^2\theta}}$ and $\boxed{\pmb{\dfrac{\phi_{ob}}{2} = \dfrac{\in_x}{2}\sin 2\theta}}$
+			\item The strain formulae can be easily recovered from stress formulae. Just change, $\sigma\rightarrow\in$ and $\tau\rightarrow\dfrac{\phi}{2}$ 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Stress analysis of member subjected to Bi-axial stress in mutually perpendicular direction}
 		\begin{figure}[H]
 				\hspace{-0.7cm}
 				\includegraphics[scale=0.45]{case2a.png}
@@ -1240,34 +1260,55 @@
 			\item $\boxed{\sigma_x=\dfrac{P_x}{A_{abcd}}}_{(3)}\;\;\;\boxed{\sigma_y = \dfrac{P_y}{A_{cdwx}}}_{(4)}\;\;\;\boxed{\tau=\dfrac{P_y}{A_{abcd}}}_{(5)}\implies\boxed{P_x=\sigma_x A_{abcd}}_{(6)}\;\;\;\boxed{P_y=\sigma_y A_{dcwx}}_{(7)}$
 			\item From Diagram(2):
 			\begin{itemize}
-				\item Resolving $P_x$ into $P_{nx}$ and $P_{tx} \implies \boxed{P_{nx} = P_xSin(90-\theta) = P_xCos\theta}\;\;\;\boxed{P_{tx} = P_xCos(90-\theta) = P_xSin\theta}$
-				\item Resolving $P_y$ into $P_{ny}$ and $P_{ty} \implies \boxed{P_{ny} = P_yCos(90-\theta) = P_ySin\theta}\;\;\;\boxed{P_{ty} = P_ySin(90-\theta) = P_yCos\theta}$
-			\end{itemize}							
-			\item $\sigma_{ob} = \dfrac{P_{nx} + P_{ny}}{A_{abwx}} = \dfrac{P_xCos\theta + P_ySin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_xCos^2\theta + P_ySin\theta Cos\theta}{A_{abcd}} = \boxed{\pmb{\sigma_x Cos^2\theta + \tau Sin\theta Cos\theta}}$ (Using (3) \& (5))
-			\item $\tau_{ob} = \dfrac{P_{ty} - P_{tx}}{A_{abwx}} = \dfrac{P_yCos\theta - P_xSin\theta}{\sfrac{A_{abcd}}{Cos\theta}} = \dfrac{P_yCos^2\theta - P_xSin\theta Cos\theta}{A_{abcd}} = \boxed{\pmb{\tau Cos^2\theta -\sigma_x Sin\theta Cos\theta}}$ (Using (3) \& (5))		
-			\item (Alt)$\sigma_{ob} = \dfrac{P_x\cos\theta + P_y\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta + \sigma_yA_{dcwx}\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta}{A_{abwx}}+\dfrac{\sigma_yA_{dcwx}\sin\theta}{A_{abwx}}$ (Using (6) \& (7))
+				\item Resolving $P_x$ into $P_{nx}$ and $P_{tx} \implies \boxed{P_{nx} = P_x\sin(90-\theta) = P_x\cos\theta}\;\;\;\boxed{P_{tx} = P_x\cos(90-\theta) = P_x\sin\theta}$
+				\item Resolving $P_y$ into $P_{ny}$ and $P_{ty} \implies \boxed{P_{ny} = P_y\cos(90-\theta) = P_y\sin\theta}\;\;\;\boxed{P_{ty} = P_y\sin(90-\theta) = P_y\cos\theta}$
+			\end{itemize}								
+			\item $\sigma_{ob} = \dfrac{P_x\cos\theta + P_y\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta + \sigma_yA_{dcwx}\sin\theta}{A_{abwx}} = \dfrac{\sigma_xA_{abcd}\cos\theta}{A_{abwx}}+\dfrac{\sigma_yA_{dcwx}\sin\theta}{A_{abwx}}$ (Using (6) \& (7))
 			\item[$\implies$] (Using (1) \& (2)) $\sigma_x\cos^2\theta + \sigma_y\sin^2\theta = \sigma_x\left[\dfrac{1+\cos 2\theta}{2}\right] + \sigma_y\left[\dfrac{1-\cos 2\theta}{2}\right] = \dfrac{\sigma_x}{2}+\dfrac{\sigma_x\cos 2\theta}{2}+\dfrac{\sigma_y}{2}-\dfrac{\sigma_y\cos 2\theta}{2}$ 
-			\item[] $$\implies \boxed{\pmb{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta}}$$
-			\item (Alt)$\tau_{ob} = \dfrac{P_y\cos\theta-P_x\sin\theta}{A_{abwx}} = \dfrac{\sigma_yA_{dcwx}\cos\theta}{A_{abwx}}-\dfrac{\sigma_xA_{abcd}\sin\theta}{A_{abwx}} = \sigma_y\sin\theta\cos\theta - \sigma_x\sin\theta\cos\theta$ (Using (1) \& (2))
-			\item[] $$\implies \boxed{\tau_{ob} = (\sigma_x-\sigma_y)\sin\theta\cos\theta = \pmb{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta}\implies \boxed{\tau_{max} = \left(\dfrac{\sigma_x-\sigma_y}{2}\right)}\;(\sin 2\theta\;is\;max\;at\;\theta=45,135)}$$
-			\item $\tau_{max}$ will occur on a plane which is inclined at an angle 45\textdegree to the principal planes
-			\item Normal stresses on the plane of $\tau_{max}$ are equal and alike. 
+			\item[] $$\implies \boxed{\pmb{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta}}\;...\;Eqn(1)$$
+			\item Eqn(1) above is maximum for when $\theta$ = 0\textdegree ,90\textdegree . So, \fbox{\textbf{Principal stress:} $\pmb{\sigma_{1,2} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\left(\dfrac{\sigma_x-\sigma_y}{2}\right)}$}
+			\item $\tau_{ob} = \dfrac{P_y\cos\theta-P_x\sin\theta}{A_{abwx}} = \dfrac{\sigma_yA_{dcwx}\cos\theta}{A_{abwx}}-\dfrac{\sigma_xA_{abcd}\sin\theta}{A_{abwx}} = \sigma_y\sin\theta\cos\theta - \sigma_x\sin\theta\cos\theta$ (Using (1) \& (2))
+			\item[] $$\implies \boxed{\tau_{ob} = (\sigma_x-\sigma_y)\sin\theta\cos\theta = \pmb{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta}}\;...\;Eqn(2)$$
+			\item Eqn(2) above is maximum for when $\theta$=45\textdegree or 135\textdegree So, Maximum shear stress: $\boxed{\pmb{\tau_{max} = \left(\dfrac{\sigma_x-\sigma_y}{2}\right)}}$
+			\item Value of normal stress in the plane of $\tau_{max}$ is $\boxed{\sigma_{ob}=\left(\dfrac{\sigma_x+\sigma_y}{2}\right)} \implies$ \textbf{Normal stresses on the plane of} $\pmb{\tau_{max}}$ \textbf{are equal and alike}. Meaning they are the same for both $\theta$=45\textdegree ,135\textdegree. As $\cos 2\theta$ is zero for both these angles.
 			\item Resultant stress on the plane of $\tau_{max}$ is $\sigma_r = \sqrt{\sigma_{ob}^2+\tau_{max}^2} = \sqrt{\left(\dfrac{\sigma_x+\sigma_y}{2}\right)^2+\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2} = \sqrt{\dfrac{\sigma_x^2+\sigma_y^2}{2}}$
 			\item \textbf{Angle of obliquity($\beta$)} : The angle between $\sigma_{ob}$ and $\sigma_r \implies \boxed{\tan\beta=\dfrac{\tau_{max}}{\sigma_{ob}} = \dfrac{\sigma_x-\sigma_y}{\sigma_x+\sigma_y}}$
-		\end{itemize}
-%-----------------------------------------------------------------------------------------%
-	\subsection{Member subjected to Pure shear stresses}
-		\begin{itemize}
-			\item $\boxed{\sigma_{ob} = \tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = \tau_{xy}\cos 2\theta}$
-			\item To find Principal planes, equate $\tau_{ob}=0 \implies \theta=45,135$
-			\item Principal stresses, $\boxed{\sigma_1,\sigma_2 = +\tau_{xy},-\tau_{xy}}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\subsection{Member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
+	\subsection{Strain analysis of member subjected to Bi-axial stress in mutually perpendicular direction}
+		\begin{itemize}
+			\begin{figure}[H]
+				\hspace{-0.7cm}
+				\includegraphics[scale=0.45]{case2a.png}
+				\end{figure}						
+			\item We know Principal Stress: $\sigma_{1,2} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\left(\dfrac{\sigma_x-\sigma_y}{2}\right)$. 
+			\item So, \fbox{\textbf{Principal Strain} ($\in_{1,2})= \left(\dfrac{\in_x+\in_y}{2}\right)\pm\left(\dfrac{\in_x-\in_y}{2}\right)$}
+			\item Similarly, Maximum Shear stress: $\tau_{max} = \left(\dfrac{\sigma_x-\sigma_y}{2}\right)$ So, \fbox{Maximum Shear strain: $\phi_{ob} = (\in_x-\in_y)$} ($\tau = \phi /2$) 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Stress analysis of member subjected to Pure shear stresses}
+		\begin{itemize}
+			\item $\boxed{\sigma_{ob} = \tau_{xy}\sin 2\theta} \impliedby$ Maximum for when $\theta$=45\textdegree , 135\textdegree $\implies$ \fbox{\textbf{Principal Stress:} $\sigma_{1,2} = \pm\tau_{xy}$}
+			\item $\boxed{\tau_{ob} = \tau_{xy}\cos 2\theta}\impliedby$ Maximum for when $\theta$=0\textdegree , 90\textdegree $\implies \boxed{\tau_{max} = \pm\tau_{xy}}$ 
+			\item Normal stress in the plane of Max shear stress will be Equal and Unlike ${\sigma_{ob} = \pm\tau_{xy}}$ 
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Strain analysis of member subjected to pure shear}
+		\begin{itemize}
+			\item $\boxed{\in_{ob} = \dfrac{\tau_{xy}\sin 2\theta}{E}}\;\;\;$\fbox{Principal strain: $\in_{1,2} = \dfrac{\pm\tau_{xy}}{E}$}
+			\item $\boxed{\dfrac{\phi_{ob}}{2} = \dfrac{\tau_{xy}\cos 2\theta}{G}}\;\;\;$\fbox{Maximum Shear strain: $\dfrac{\phi_{max}}{2} = \dfrac{\pm\tau_{xy}}{G}$} Where G = Shear modulus
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Stress analysis of member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
 		\begin{itemize}
 			\item $\boxed{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm \left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta+\tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = -\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta+\tau_{xy}\cos 2\theta}$
 			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{2\tau_{xy}}{\sigma_x-\sigma_y}}$
 			\item Principal stresses: $\boxed{\sigma_1,\sigma_2 = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+	\subsection{Strain analysis of member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
+		\begin{itemize}
+			\item
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Graphical Method - Mohr's circle}
@@ -1297,25 +1338,6 @@
 					\end{itemize}
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Analysis of Strain}
-	\subsection{Strain analysis of element subjected to Bi-axial stress in Mutually perpendicular direction}
-		\begin{itemize}
-			\item Consider an element being subjected to Bi-axial stress($\sigma_x\;\&\;\sigma_y$) in two mutually perpendicular directions
-			\item Since, there is no shear, $\sigma_x=\sigma_1$ and $\sigma_y=\sigma_2$ will be the principal stresses
-			\item Principal strains: $\boxed{\in_1=\dfrac{\sigma_1}{E}-\mu\dfrac{\sigma_2}{E}}\;\;\;\boxed{\dfrac{\sigma_2}{E}-\mu\dfrac{\sigma_1}{E}}$ 
-			\item Principal stresses: $\boxed{\sigma_1 = \dfrac{E}{1-\mu^2}(\in_1+\mu\in_2)}\;\;\;\boxed{\sigma_2 = \dfrac{E}{1-\mu^2}(\in_2+\mu\in1)}$
-			\item If principal strains are known in principal directions, then principal stresses can be calculated
-			\item Now for any direction $\theta$, the normal and transverse strain \& shear strain in that plane can be easily calculated:
-			\item $\boxed{\in_{ob} = \left(\dfrac{\in_1+\in_2}{2}\right)\pm\left(\dfrac{\in_1-\in_2}{2}\right)\cos 2\theta}\;\;\;\boxed{\dfrac{\phi_{ob}}{2}=-\dfrac{\in_1-\in_2}{2}\sin 2\theta}$
-		\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
-	\subsection{Strain analysis of element subjected to Bi-axial stress in mutually perpendicular direction as well as shear stress}
-		\begin{itemize}
-			\item $\boxed{\in{ob} = \left(\dfrac{\in_x+\in_y}{2}\right)\pm \left(\dfrac{\in_x-\in_y}{2}\right)\cos 2\theta+\dfrac{\phi_{xy}}{2}\sin 2\theta}\;\;\;\boxed{\dfrac{\phi_{ob}}{2} = -\left(\dfrac{\in_x-\in_y}{2}\right)\sin 2\theta+\dfrac{\phi_{xy}}{2}\cos 2\theta}$
-			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{\phi_{xy}}{\in_x-\in_y}}$
-			\item Principal stresses: $\boxed{\in_1,\in_2 = \left(\dfrac{\in_x+\in_y}{2}\right)\pm\sqrt{\left(\dfrac{\in_x-\in_y}{2}\right)^2+\left(\dfrac{\tau_{xy}}{2}\right)^2}}$
-		\end{itemize}\hrulefill
-%-----------------------------------------------------------------------------------------%
 	\section{Properties of Strain Mohr's circle}
 		\begin{itemize}
 			\item Horizontal axis : $\in$-axis \hspace{1cm} Vertical axis : $\dfrac{\phi}{2}$-axis
@@ -1323,15 +1345,23 @@
 			\item The center coordinate of Mohr's circle $\left(\dfrac{\in_x+\in_y}{2}\right)$ represent normal strain in the direction of $\phi_{max}$		
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
-	\section{Rosettes}
+	\section{Strain Rosettes}
+		\begin{itemize}
+			\item It is an arrangement of 3 linear strain gauges using which linear strains in 3 directions are measured
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
 		\subsection{Rectangular rosette}
 			\begin{itemize}
-				\item
+				\item Of the 3 strain gauges, if two among them are mutually perpendicular to each other, then it is called as \textbf{rectangular rosette}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale=0.4]{rectangular_rosette.png}
+				\end{figure}
 			\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Delta $\Delta$ rosette}
 		\begin{itemize}
-			\item
+			\item If all the 3 gauges are at equal angular distance from one another, then its called \textbf{star rosette} or \textbf{delta rosette}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Star rosette}
