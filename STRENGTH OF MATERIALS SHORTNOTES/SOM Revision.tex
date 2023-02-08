@@ -1287,6 +1287,10 @@
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Stress analysis of member subjected to Pure shear stresses}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{case_pureshear.png}
+		\end{figure}
 		\begin{itemize}
 			\item $\boxed{\sigma_{ob} = \tau_{xy}\sin 2\theta} \impliedby$ Maximum for when $\theta$=45\textdegree , 135\textdegree $\implies$ \fbox{\textbf{Principal Stress:} $\sigma_{1,2} = \pm\tau_{xy}$}
 			\item $\boxed{\tau_{ob} = \tau_{xy}\cos 2\theta}\impliedby$ Maximum for when $\theta$=0\textdegree , 90\textdegree $\implies \boxed{\tau_{max} = \pm\tau_{xy}}$ 
@@ -1303,12 +1307,13 @@
 		\begin{itemize}
 			\item $\boxed{\sigma_{ob} = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm \left(\dfrac{\sigma_x-\sigma_y}{2}\right)\cos 2\theta+\tau_{xy}\sin 2\theta}\;\;\;\boxed{\tau_{ob} = -\left(\dfrac{\sigma_x-\sigma_y}{2}\right)\sin 2\theta+\tau_{xy}\cos 2\theta}$
 			\item To find principal plane, Equate $\tau_{ob} = 0 \implies \boxed{\tan 2\theta_p = \dfrac{2\tau_{xy}}{\sigma_x-\sigma_y}}$
-			\item Principal stresses: $\boxed{\sigma_1,\sigma_2 = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}}$
+			\item \fbox{\textbf{Principal stresses:} $\pmb{\sigma_1,\sigma_2 = \left(\dfrac{\sigma_x+\sigma_y}{2}\right)\pm\sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}}$}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\subsection{Strain analysis of member subjected to Bi-axial stress in mutually perpendicular direction as well as shear stresses}
 		\begin{itemize}
-			\item
+			\item \fbox{\textbf{Principal Strain: }$\in_{1,2} = \left(\dfrac{\in_x+\in_y}{2}\right)\pm\sqrt{\left(\dfrac{\in_x-\in_y}{2}\right)^2+\tau_{xy}^2}$}
+			\item \fbox{\textbf{Maximum Shear strain: }$\dfrac{\phi_{max}}{2} = \left(\dfrac{\in_x-\in_y}{2}\right)$}
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 	\section{Graphical Method - Mohr's circle}
