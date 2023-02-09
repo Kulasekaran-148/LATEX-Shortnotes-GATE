@@ -4,7 +4,7 @@
 \usepackage[margin=0.7in]{geometry}
 \graphicspath{ {images/} }
 \linespread{0.8}
-\title{\Huge{\textsc{Strength of Materials - GATE}}}
+\title{\Huge{\textsc{Engineering Mechanics - GATE}}}
 \author{\huge{\textbf{Kulasekaran}}}
 \begin{document}
 \maketitle
@@ -112,14 +112,191 @@
 	\end{table}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \chapter{Analysis of Simple trusses}
+\section{Plane Trusses}
 	\begin{itemize}
-		\item
-	\end{itemize}
+		\item Plane Trusses - 2D trusses - All members lie on the same plane
+		\item Designed to resist Geometrical distortion under loading
+		\item Usually slender - CS Area very less compared to length
+		\item \textbf{Two force members} - Theoretically carry only axial forces, Either in tension or in compression
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Perfect Trusses}
+	\begin{itemize}
+		\item Truss with just the right amount of members to avoid any distortion under loading
+		\item Simplest perfect truss = Triangle
+		\item \fbox{\textbf{Maxwell's Truss equation}: $m = 2j-3 \impliedby$ (m=No. of member, j = No. of joints)}
+		\begin{itemize}
+			\item Perfect truss $\implies m = 2j-3$ (Do not change in shape, right no of members)
+			\item Imperfect truss $\implies m < 2j-3$ (change in shape, deficient members)
+			\item Redundant truss $\implies m > 2j-3$ (Do not change in shape, extra members)
+		\end{itemize}
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Types of Supports}
+\subsection{Roller support}
+	\begin{itemize}
+		\item They are frictionless and provide only one reaction component that is vertical to its base
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Hinged support}
+	\begin{itemize}
+		\item They are fixed to their base and provide both horizontal and vertical reaction forces
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Truss Analysis}
+	\begin{itemize}
+		\item Involves finding support reactions and force in members
+		\item Assumptions:
+			\begin{itemize}
+				\item Members are \textbf{Rigid} and lie in one plane (in case of plane truss)
+				\item Members are \textbf{slender, Uniform cross-section}
+				\item Members are subjected to pure axial force and cannot develop moments at ends
+				\item External loads and reactions act at the joints only
+				\item Self weight of the members is negligible
+				\item Forces are transmitted from one member to another via frictionless pins connecting the members
+			\end{itemize}
+		\item Methods to Analyse Trusses
+			\begin{itemize}
+				\item Method of Joints
+				\item Method of Sections
+			\end{itemize}
+		\item Mostly questions in this topic is focused on:
+			\begin{itemize}
+				\item \textbf{Zero force member} - Member that is not under any force
+				\item whether a member is under tension or compression
+			\end{itemize}
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Method of Joints}
+	\begin{itemize}
+		\item In this method, $\sum F_x and \sum F_y$ for any joint, must be equal to Zero. (Static equilibrium)
+		\item FBD of entire truss is drawn and the support reactions are found first using $\sum F_x = 0, \sum F_y=0, \sum M=0$
+		\item Then start from a joint where there are not more than 2 unknown forces. Assume the direction of the forces of the members and in the end if they come out to be positive, then the assumed direction is right, else, the assumed direction is wrong.
+		\item If a member pulls the joint to which it is connected, then it is subjected to Tensile force.
+		\item If a member pushes the joint to which it is connected, then it is subjected to compressive force.
+		\item \textbf{Tie} - Member under Tension, \textbf{Strut} - Member under Compression
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Method of Sections}
+	\begin{itemize}
+		\item The truss is split into 2 parts by an imaginary section
+		\item The section must not cut through more than 3 members with unknown forces
+		\item The equilibrium conditions are applied for one part and the unknown forces in that part are determined
+		\item Similar to the Method of joints, here also, at first the forces are assumed directions and based on its outcome its verified/changed
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Tricks for finding Zero Force Member}
+	\begin{itemize}
+		\item If at a an unloaded joint (a joint with no external load) with three members, two collinear forces are acting, then the third member will be a Zero Force member	
+		\item In the below shown example, in Left figure, Member \textbf{DC, EF, HG} are Zero force members and in the right figure, Member \textbf{AC, CD} are Zero force members	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{zeroforcemember.png}
+		\end{figure}
+	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \chapter{Friction}
+\section{Introduction}
 	\begin{itemize}
-		\item
+		\item When two bodies are in contact and when one body is moved with respect to another, there develops a tangential force between the bodies trying to prevent motion. 
+		\item Friction always develops opposite to the direction of motion
+		\item The rougher the surface, more will be the friction
+		\item Only when applied force is higher than the frictional force, there will be motion
 	\end{itemize}
+\subsection{Dry Friction}
+	\begin{itemize}
+		\item Friction between two Non-lubricated solids with motion or tendency of motion
+	\end{itemize}
+\subsection{Fluid Friction}
+	\begin{itemize}
+		\item Friction between two layers of liquid in a flow. Also known as \textbf{Viscosity}. Dealt with in Fluid Mechanics
+	\end{itemize}
+\subsection{Static Friction and Static Friction laws}
+	\begin{itemize}
+		\item When applied force is less than the frictional force and so the body is not set in motion, that frictional force is called Static friction
+		\item[$\implies$] Limiting frictional force $\propto$ Normal reaction between two contact surfaces
+		\item[$\implies$] \textbf{Friction is independent of area of contact/shape}
+	\end{itemize}
+\subsection{Dynamic Friction}
+	\begin{itemize}
+		\item If the body was set in motion due to applied force being higher than the frictional force between them, then that frictional force still being experience by the moving body is called dynamic friction
+	\end{itemize}
+%-----------------------------------------------------------------------------------------%
+\section{Coefficient of Friction}
+	\begin{itemize}
+		\item We know $Limiting\;friction\;\propto\;Normal\;Force \implies \boxed{F_{SL} = \mu_{SF} N}\impliedby (\mu_{SF}$ = Coefficient of static friction)
+		\item $\boxed{F_{DL}=\mu_{DF}N}\impliedby(\mu_{DF}$ = Coefficient of Dynamic friction)
+		\item $\boxed{\mu_{SF}>\mu_{DF}}\impliedby$ as ($F_{SL}>F_{DL}$) $\impliedby F_{SL}$ = Static Limiting friction, $F_{DL}$ = Dynamic Limiting friction
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Angle of Friction ($\phi$)}
+	\begin{itemize}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{angleoffriction.png}
+		\end{figure}
+		\item It is the angle between the resultant($N'$) of limiting friction($F_{SL}$) and Normal force($N$) and the Normal force($N$). $\boxed{N' = \sqrt{N^2+F_{SL}^2}}$
+		\item $\boxed{\tan\phi=\dfrac{F_{SL}}{N}}\implies \tan\phi=\mu_{SF}\implies\boxed{\phi=\tan^{-1}(\mu_{SF})}$
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Angle of repose ($\alpha$)}
+	\begin{itemize}
+		\item The max angle of plane inclination for which a body resting on such plane will not slide due to its own weight is called \textbf{Angle of Repose}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{angleofrepose.png}
+		\end{figure}
+		\item $W\cos\alpha=N$ and $W\sin\alpha=F_{SF}\implies W\sin\alpha=\mu_{SF}N$
+		\item Dividing the above will give us $\tan\alpha=\mu_{SF}$ But $\mu_{SF}=\tan\phi$
+		\item So, it can be stated that \fbox{\textbf{Angle of repose = Angle of friction}}
+	\end{itemize}\hrulefill	
+%-----------------------------------------------------------------------------------------%
+\section{Wedge}
+\subsection{Load(W)}
+	\begin{itemize}
+		\item  Weight lifted (or) resistance overcome by the machine
+	\end{itemize}
+\subsection{Effort(P)}
+	\begin{itemize}
+		\item Force required by the machine to lift the load $\boxed{P = W\tan(2\phi+\alpha)}$
+	\end{itemize}
+\subsection{Mechanical Advantage}
+	\begin{itemize}
+		\item $\boxed{MA = \dfrac{W}{P}}$
+		\item Changes wrt to changes in friction
+		\item Some machines have MA less than 1 $\implies$ They require more effort than load lifted.
+		\item For a wedge, if $\alpha\downarrow$, then $MA\uparrow$ 
+		\item MA for both single and double wedge is same for same $\alpha$
+	\end{itemize}
+\subsection{Input}
+	\begin{itemize}
+		\item Work done by effort(P) $\implies$ (P * Distance of movement = P * x)
+	\end{itemize}
+\subsection{Output}
+	\begin{itemize}
+		\item Work done by machine $\implies$ (W * Distance of movement = W * y)
+	\end{itemize}
+\subsection{Efficiency($\eta$)}
+	\begin{itemize}
+		\item $\boxed{\eta=\dfrac{Output}{Input} = \dfrac{W*y}{P*x} = \dfrac{MA}{VR}}$
+		\item As Efficiency for a machine is always less than one, this implies \textbf{MA is always less than VR}
+	\end{itemize}
+\subsection{Velocity ratio(VR)}
+	\begin{itemize}
+		\item $\boxed{VR = \dfrac{Velocity\;of\;effort}{Velocity\;of\;load} = \dfrac{x/t}{y/t} = \dfrac{x}{y}}$
+		\item Depends only on geometrical features of the machine
+		\item Constant for a machine
+		\item For a wedge, $\boxed{VR = \dfrac{L}{W}} = Slope^{-1} \impliedby$ (L = length, W = Width)
+		\item VR is different for single wedge and double wedge with same $\alpha$
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Rolling friction}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	
+	
+	
 %-----------------------------------------------------------------------------------------%
 \chapter{Work and Energy}
 	\begin{itemize}
