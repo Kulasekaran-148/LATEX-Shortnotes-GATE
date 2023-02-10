@@ -320,6 +320,94 @@
 			\item So, to avoid skidding : $\mu W \geq \dfrac{W}{g}\left(\dfrac{V^2}{r}\right) \implies \boxed{v_{max}\le\sqrt{\mu gr}}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
+\section{Motion of 4-Wheeler on a circular road}
+	\begin{table}[H]
+		\begin{tabular}{cc}
+			\parbox{4cm}{\includegraphics[scale=0.5]{4wheeler_circular.png}} & \hspace{5.8cm}
+			\parbox{12cm}{$\rightarrow$ Consider a 4 wheeled vehicle with Weight(w)\\\\$\rightarrow$ Moving with uniform velocity(v)\\\\$\rightarrow$ Center of Gravity at height(h) from ground\\\\$\rightarrow$ Distance between wheels (2b)}
+		\end{tabular}
+	\end{table}
+	\subsection{Reaction forces}
+		\begin{itemize}
+			\item By $\sum F_y=0$, we get $R_A + R_B = W$ (By symmetry itself we can say that $R_A$ will be equal to $R_B$)
+			\item By applying $\sum M_A=0$, we get $Wb+ma_nh=2bR_B \implies Wb+\left(\dfrac{W}{g}\right)\left(\dfrac{v^2}{r}\right)h=2bR_B$
+			\item So, $R_B=\dfrac{Wb}{2b}+\left(\dfrac{Wv^2h}{2bgr}\right) \implies \boxed{R_B=\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)}$
+			\item So, $R_A = W-R_B = W-\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right) \boxed{R_A=\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)} $
+		\end{itemize}
+	\subsection{Max Speed to avoid Overturning}
+		\begin{itemize}
+			\item Overturning = Side wheeling = Only outward wheels touching the ground
+			\item To find the speed limit of Overturning, we can equate the inward wheel reaction to zero, in this case $R_A\geq 0 \implies \dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)\geq 0 \implies \boxed{ \dfrac{v^2h}{bgr}\geq 1}$
+		\end{itemize}
+	\subsection{Max Speed to avoid skidding}
+		\begin{itemize}
+			\item To avoid skidding $\left(ma_n\le f_a + f_b\right) \implies \dfrac{Wv^2}{gr}\le\mu(R_A+R_B) \implies \dfrac{Wv^2}{gr}\le \mu W \implies \boxed{V_{max} = \sqrt{\mu gr}}$
+		\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Motion of 4-wheeler on Banked circular path}
+	\begin{table}[H]
+		\begin{tabular}{cc}
+			\parbox{4cm}{\includegraphics[scale=0.5]{vehiclebanked.png}} & \hspace{6.5cm}
+			\parbox{12cm}{$\rightarrow$ Consider a Vehicle with weight(W)\\\\$\rightarrow$ Moving with a Optimum velocity(v)\\\\$\rightarrow$ On a banked circular path with slope($\theta$)\\\\}
+		\end{tabular}
+	\end{table}
+	\subsection{Optimum speed to negotiate curved path}
+	\begin{itemize}
+		\item By $\sum F_x=0$ we get, $ma_n=(R_a+R_b)\sin\theta \implies \dfrac{Wv^2}{gr}=(R_a+R_b)\sin\theta$
+		\item By $\sum F_y=0$ we get, $W=(R_a+R_b)\cos\theta$
+		\item By dividing the above two equations, we obtain: $\tan\theta=\dfrac{v^2}{gr} \implies \boxed{v=\sqrt{gr\tan\theta}} \impliedby$ (Optimum speed to negotiate curved path)
+		\item If the speed of the vehicle is below the Optimum speed, then due to gravity, the vehicle will tend to fall inwards and so the tyres will experience outward frictional force
+		\item \textbf{If the speed of the vehicle is equal to Optimum speed, then the tyres won't experience lateral frictional force}
+		\item If the speed of the vehicle is above the Optimum speed, then the tyres will experience inward frictional force
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Motion of Locomotive on a Banked circular path}
+	\begin{itemize}
+		\item
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Belt, Rope and Pulley}
+\subsection{Flat Belt}
+	\begin{itemize}
+		\item \fbox{\textbf{DERIVATION REQUIRED $\impliedby \impliedby \impliedby \impliedby \impliedby$}}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{flatbelt.png}
+		\end{figure}
+		\item $T_2$ = Tight side, $T_1$ = Slack side		
+		\item \textbf{Always in formula: Tight slide / Slack side}		
+		\item $\boxed{T_2=T_1e^{\mu\beta}}\impliedby$ ($\beta$ = Total angle of contact \textbf{in Radians})
+		\item If a rope were wrapped around the drum n times, then $\beta=2\pi n$
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Rope or V-Belt}
+	\begin{itemize}
+		\item \fbox{\textbf{DERIVATION REQUIRED $\impliedby \impliedby \impliedby \impliedby \impliedby$}}	
+		\item $\boxed{\dfrac{T_2}{T_1}=e^{\left(\dfrac{\mu\beta}{\sin\alpha}\right)}}\impliedby$ (Applicable only when the rope/belt is about to slip)
+		\item Where $\alpha$ = groove angle with respect to vertical
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Advantages of Rope or V-Belt over Flat belts}
+	\begin{itemize}
+		\item Rope drives are more suitable for transmitting large powers
+		\item In Rope drives, sideways slipping do not occur due to the presence of grooves
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\section{Tension in the Belt}
+\subsection{Initial Tension}
+	\begin{itemize}
+		\item When the belt drive is at rest, some initial tension is always maintained to keep the belt tightly fit on the pulleys. This is called Initial tension ($T_i$)
+		\item While transmitting power, the tension becomes $T1=T_i-\delta T$ (slack) and on the other side it becomes $T_2=T_i+\delta T$ (Tight). This change from initial tension is same for both side as the material is assumed to be elastic
+		\item $\boxed{T_i=\dfrac{T_1+T_2}{2}}$
+	\end{itemize}\hrulefill
+%-----------------------------------------------------------------------------------------%
+\subsection{Centrifugal Tension}
+	\begin{itemize}
+		\item While transmitting power, the belt running in a circular path over a pulley, experiences centrifugal force which tends to move the belt away from the contact surface, thereby reducing normal reaction and hence the friction and hence the Transmitting power
+		\item In addition to the above, it also induces an extra tension called \textbf{centrifugal tension} on the belt/rope.
+		
+	\end{itemize}
+%-----------------------------------------------------------------------------------------%
 \chapter{Work and Energy}
 	\begin{itemize}
 		\item
