@@ -308,16 +308,16 @@
 	\end{table}
 	\subsection{Angle of Leaning($\theta$)}
 		\begin{itemize}
-			\item Centripetal acceleration developed would be : $a_n = \dfrac{v^2}{r}$
+			\item Centripetal acceleration developed would be : $a_n = \dfrac{V^2}{r}$
 			\item The cyclist has to lean inward to maintain dynamic equilibrium and an inertial force $ma_n$ is acting on the cyclist
-			\item By applying $\sum M=0$ about the point of contact, we get: $W(h\tan\theta)-(ma_n)h=0 \implies \boxed{\theta=\tan^{-1}\left(\dfrac{v^2}{rg}\right)}$ 
+			\item By applying $\sum M=0$ about the point of contact, we get: $W(h\tan\theta)-(ma_n)h=0 \implies \boxed{\theta=\tan^{-1}\left(\dfrac{V^2}{rg}\right)}$ 
 		\end{itemize}
 	\subsection{Maximum speed ($v_{max}$) to avoid skidding}
 		\begin{itemize}
 			\item By $\sum F_y = 0 \implies R = W$ and $\sum F_x=0 \implies ma_n=f$
 			\item Skidding is avoided if the frictional force(f) is greater than or equal to centrifugal force
 			\item $\implies f_{max} = \mu R = \mu W$
-			\item So, to avoid skidding : $\mu W \geq \dfrac{W}{g}\left(\dfrac{V^2}{r}\right) \implies \boxed{v_{max}\le\sqrt{\mu gr}}$
+			\item So, to avoid skidding : $\mu W \geq \dfrac{W}{g}\left(\dfrac{V^2}{r}\right) \implies \boxed{V_{max}\le\sqrt{\mu gr}}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \section{Motion of 4-Wheeler on a circular road}
@@ -330,53 +330,61 @@
 	\subsection{Reaction forces}
 		\begin{itemize}
 			\item By $\sum F_y=0$, we get $R_A + R_B = W$ (By symmetry itself we can say that $R_A$ will be equal to $R_B$)
-			\item By applying $\sum M_A=0$, we get $Wb+ma_nh=2bR_B \implies Wb+\left(\dfrac{W}{g}\right)\left(\dfrac{v^2}{r}\right)h=2bR_B$
-			\item So, $R_B=\dfrac{Wb}{2b}+\left(\dfrac{Wv^2h}{2bgr}\right) \implies \boxed{R_B=\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)}$
-			\item So, $R_A = W-R_B = W-\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right) \boxed{R_A=\dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)} $
+			\item By applying $\sum M_A=0$, we get $Wb+ma_nh=2bR_B \implies Wb+\left(\dfrac{W}{g}\right)\left(\dfrac{V^2}{r}\right)h=2bR_B$
+			\item So, $R_B=\dfrac{Wb}{2b}+\left(\dfrac{WV^2h}{2bgr}\right) \implies \boxed{R_B=\dfrac{W}{2}\left(1+\dfrac{V^2h}{bgr}\right)}$
+			\item So, $R_A = W-R_B = W-\dfrac{W}{2}\left(1+\dfrac{V^2h}{bgr}\right) \boxed{R_A=\dfrac{W}{2}\left(1+\dfrac{V^2h}{bgr}\right)} $
 		\end{itemize}
 	\subsection{Max Speed to avoid Overturning}
 		\begin{itemize}
 			\item Overturning = Side wheeling = Only outward wheels touching the ground
-			\item To find the speed limit of Overturning, we can equate the inward wheel reaction to zero, in this case $R_A\geq 0 \implies \dfrac{W}{2}\left(1+\dfrac{v^2h}{bgr}\right)\geq 0 \implies \boxed{ \dfrac{v^2h}{bgr}\geq 1}$
+			\item To find the speed limit of Overturning, we can equate the inward wheel reaction to zero, in this case $R_A\geq 0 \implies \dfrac{W}{2}\left(1+\dfrac{V^2h}{bgr}\right)\geq 0 \implies \boxed{ \dfrac{V^2h}{bgr}\geq 1}$
 		\end{itemize}
 	\subsection{Max Speed to avoid skidding}
 		\begin{itemize}
-			\item To avoid skidding $\left(ma_n\le f_a + f_b\right) \implies \dfrac{Wv^2}{gr}\le\mu(R_A+R_B) \implies \dfrac{Wv^2}{gr}\le \mu W \implies \boxed{V_{max} = \sqrt{\mu gr}}$
+			\item To avoid skidding $\left(ma_n\le f_a + f_b\right) \implies \dfrac{WV^2}{gr}\le\mu(R_A+R_B) \implies \dfrac{WV^2}{gr}\le \mu W \implies \boxed{V_{max} = \sqrt{\mu gr}}$
 		\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \section{Motion of 4-wheeler on Banked circular path}
 	\begin{table}[H]
 		\begin{tabular}{cc}
-			\parbox{4cm}{\includegraphics[scale=0.5]{vehiclebanked.png}} & \hspace{6.5cm}
+			\parbox{4cm}{\includegraphics[scale=0.45]{vehiclebanked.png}} & \hspace{6.5cm}
 			\parbox{12cm}{$\rightarrow$ Consider a Vehicle with weight(W)\\\\$\rightarrow$ Moving with a Optimum velocity(v)\\\\$\rightarrow$ On a banked circular path with slope($\theta$)\\\\}
 		\end{tabular}
 	\end{table}
 	\subsection{Optimum speed to negotiate curved path}
 	\begin{itemize}
-		\item By $\sum F_x=0$ we get, $ma_n=(R_a+R_b)\sin\theta \implies \dfrac{Wv^2}{gr}=(R_a+R_b)\sin\theta$
+		\item By $\sum F_x=0$ we get, $ma_n=(R_a+R_b)\sin\theta \implies \dfrac{WV^2}{gr}=(R_a+R_b)\sin\theta$
 		\item By $\sum F_y=0$ we get, $W=(R_a+R_b)\cos\theta$
-		\item By dividing the above two equations, we obtain: $\tan\theta=\dfrac{v^2}{gr} \implies \boxed{v=\sqrt{gr\tan\theta}} \impliedby$ (Optimum speed to negotiate curved path)
+		\item By dividing the above two equations, we obtain: $\tan\theta=\dfrac{V^2}{gr} \implies \boxed{V=\sqrt{gr\tan\theta}} \impliedby$ (Optimum speed to negotiate curved path)
 		\item If the speed of the vehicle is below the Optimum speed, then due to gravity, the vehicle will tend to fall inwards and so the tyres will experience outward frictional force
 		\item \textbf{If the speed of the vehicle is equal to Optimum speed, then the tyres won't experience lateral frictional force}
 		\item If the speed of the vehicle is above the Optimum speed, then the tyres will experience inward frictional force
 	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \section{Motion of Locomotive on a Banked circular path}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{locomotive_banked.png}
+	\end{figure}
 	\begin{itemize}
-		\item
+		\item In order for the flanges on the rail's wheels to not experience any sideways thrust, the outer rail is raised by a height \textbf{e} compared to the inner rail. This is called \textbf{Super elevation}
+		\item From the above diagram, we can infer that $e = b\sin\theta \approx b\tan\theta \implies \boxed{e = \dfrac{bV^2}{gr}}$
 	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
 \section{Belt, Rope and Pulley}
 \subsection{Flat Belt}
 	\begin{itemize}
-		\item \fbox{\textbf{DERIVATION REQUIRED $\impliedby \impliedby \impliedby \impliedby \impliedby$}}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.4]{flatbelt.png}
+			\includegraphics[scale=0.4]{flatbeltelement.png}
 		\end{figure}
+		\item By $\sum F_x=0 \implies T\cos\dfrac{d\theta}{2}+\mu dN = (T+dT)\cos\dfrac{d\theta}{2} \implies \boxed{\mu dN = dT} \impliedby$ (Here, $\mu dN$ is frictional force)
+		\item Similarly By $\sum F_y=0 \implies dN = (T+dT)sin\dfrac{d\theta}{2}+T\sin\dfrac{d\theta}{2} \implies \boxed{dN = Td\theta}$
+		\item From the above two results, $\mu Td\theta = dT \implies \mu d\theta = \dfrac{dT}{T} \implies \bigintss_{T_1}^{T_2}\dfrac{dT}{T} = \int_{0}^{\beta}\mu d\theta \implies \ln\left(\dfrac{T_2}{T_1}\right) = \mu\beta$
+		\item $\boxed{T_2=T_1e^{\mu\beta}}\impliedby$ ($\beta$ = Total angle of contact \textbf{in Radians})
 		\item $T_2$ = Tight side, $T_1$ = Slack side		
 		\item \textbf{Always in formula: Tight slide / Slack side}		
-		\item $\boxed{T_2=T_1e^{\mu\beta}}\impliedby$ ($\beta$ = Total angle of contact \textbf{in Radians})
 		\item If a rope were wrapped around the drum n times, then $\beta=2\pi n$
 	\end{itemize}\hrulefill
 %-----------------------------------------------------------------------------------------%
